@@ -1,0 +1,1159 @@
+[gd_scene load_steps=21 format=3 uid="uid://d1ig42f76a3wx"]
+
+[ext_resource type="VideoStream" path="res://data/Images and Videos/envirnment/Scenes/Levels/tv and vids/big-buck-bunny_trailer.ogv" id="1_pjxwc"]
+[ext_resource type="PackedScene" uid="uid://qb22rttv2avq" path="res://data/Images and Videos/logo.tscn" id="2_ibnq3"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_7ldk7"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_ldy45"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_74qk6"]
+viewport_path = NodePath("stage/TV/Node2D/SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ms6u1"]
+resource_local_to_scene = true
+albedo_texture = SubResource("ViewportTexture_74qk6")
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_7c4fe"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_2jrb4"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yc5lm"]
+size = Vector3(1.03174, 1.22351, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_g8eou"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_ilpeb"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_1j82k"]
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_ajcwd"]
+albedo_color = Color(0.596078, 0.870588, 1, 1)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_r46rh"]
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_xbwka"]
+albedo_color = Color(0.776471, 0.862745, 1, 1)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_pbd7y"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_skujp"]
+albedo_color = Color(0.815686, 0.847059, 1, 1)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_xx231"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_y1u8l"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_m3cnj"]
+
+[node name="Stage" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.22962, 8.51571, -1.65338)
+
+[node name="stage" type="Node3D" parent="."]
+transform = Transform3D(0.714546, 0, 0.699589, 0, 1, 0, -0.699589, 0, 0.714546, -50.718, -5.7715, -66.8256)
+
+[node name="TV" type="Node3D" parent="stage"]
+transform = Transform3D(4.92512, 0.00716045, -0.00100945, -0.0138107, 2.55387, -0.000360183, 0.00496882, 0.000927529, 0.999568, -1.36384, 6.38893, -11.1627)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="stage/TV"]
+transform = Transform3D(2.4267, 0, 0, 0, 2.09183, 0, 0, 0, 0.487183, 0, 0, 0)
+mesh = SubResource("BoxMesh_7ldk7")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="stage/TV"]
+transform = Transform3D(2.25574, 0, 0, 0, 1.77814, 0, 0, 0, 0.0081138, -0.00263291, 0.0261305, 0.254375)
+mesh = SubResource("QuadMesh_ldy45")
+surface_material_override/0 = SubResource("StandardMaterial3D_ms6u1")
+
+[node name="Node2D" type="Node2D" parent="stage/TV"]
+
+[node name="SubViewport" type="SubViewport" parent="stage/TV/Node2D"]
+size = Vector2i(150, 75)
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="stage/TV/Node2D/SubViewport"]
+clip_contents = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+stretch = true
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="stage/TV/Node2D/SubViewport/SubViewportContainer"]
+layout_mode = 2
+stream = ExtResource("1_pjxwc")
+autoplay = true
+expand = true
+loop = true
+
+[node name="SubViewport" type="SubViewport" parent="stage/TV/Node2D/SubViewport/SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(150, 75)
+render_target_update_mode = 4
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="stage/TV"]
+transform = Transform3D(0.400779, 0, 0, 0, 0.672341, 0, 0, 0, 0.281836, -0.754772, -1.73713, -0.0336982)
+mesh = SubResource("CylinderMesh_7c4fe")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="stage/TV"]
+transform = Transform3D(0.374969, 0, 0, 0, 0.657657, 0, 0, 0, 0.27568, 0.839715, -1.73713, -0.0336982)
+mesh = SubResource("CylinderMesh_7c4fe")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="stage/TV"]
+physics_material_override = SubResource("PhysicsMaterial_2jrb4")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stage/TV/StaticBody3D"]
+transform = Transform3D(2.23967, -8.81283e-09, 6.40284e-10, -2.59536e-09, 2.58342, 1.10595e-09, 5.4948e-08, 3.25963e-09, 4.42358, -0.0363538, 0.175564, -3.8147e-06)
+shape = SubResource("BoxShape3D_yc5lm")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="stage"]
+transform = Transform3D(57.9579, 0, 0, 0, 1, 0, 0, 0, 55.638, 0, -0.880486, 0)
+mesh = SubResource("CylinderMesh_g8eou")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="stage/MeshInstance3D4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stage/MeshInstance3D4/StaticBody3D"]
+transform = Transform3D(0.999884, 0, 0, 0, 1, 0, 0, 0, 1.05693, 0, 0, 0)
+shape = SubResource("CylinderShape3D_ilpeb")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="stage"]
+transform = Transform3D(31.7605, -0.000576313, 0, 0.0687365, 0.266292, 0, 0, 0, 29.7649, -0.140053, 1.16367, 0.644547)
+mesh = SubResource("CylinderMesh_1j82k")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("ORMMaterial3D_ajcwd")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="stage/MeshInstance3D3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stage/MeshInstance3D3/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 1.49012e-08, 1, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("CylinderShape3D_r46rh")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="stage"]
+transform = Transform3D(40.5298, -0.000576015, 0, 0.0877151, 0.266155, 0, 0, 0, 39.6418, -0.357749, 0.551889, 0.962306)
+mesh = SubResource("CylinderMesh_1j82k")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("ORMMaterial3D_xbwka")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="stage/MeshInstance3D2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stage/MeshInstance3D2/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 2.98023e-08, 1, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("CylinderShape3D_pbd7y")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="stage"]
+transform = Transform3D(50.8217, 0, 0, 0, 0.553112, 0, 0, 0, 49.0762, 0.199533, -0.155872, 0.750413)
+mesh = SubResource("CylinderMesh_1j82k")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_skujp")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="stage/MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stage/MeshInstance3D/StaticBody3D"]
+shape = SubResource("CylinderShape3D_xx231")
+
+[node name="stage9" type="Node3D" parent="."]
+transform = Transform3D(0.714546, 0, 0.699589, 0, 1, 0, -0.699589, 0, 0.714546, -4.00477, -8.04992, -0.0372893)
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="stage9"]
+transform = Transform3D(57.9579, 0, 0, 0, 1, 0, 0, 0, 55.638, 0, -0.880486, 0)
+mesh = SubResource("CylinderMesh_g8eou")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="stage9/MeshInstance3D4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stage9/MeshInstance3D4/StaticBody3D"]
+transform = Transform3D(0.999884, 0, 0, 0, 1, 0, 0, 0, 1.05693, 0, 0, 0)
+shape = SubResource("CylinderShape3D_ilpeb")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="stage9"]
+transform = Transform3D(31.7605, -0.000576313, 0, 0.0687365, 0.266292, 0, 0, 0, 29.7649, -0.140053, 1.16367, 0.644547)
+mesh = SubResource("CylinderMesh_1j82k")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("ORMMaterial3D_ajcwd")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="stage9/MeshInstance3D3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stage9/MeshInstance3D3/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 1.49012e-08, 1, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("CylinderShape3D_r46rh")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="stage9"]
+transform = Transform3D(40.5298, -0.000576015, 0, 0.0877151, 0.266155, 0, 0, 0, 39.6418, -0.357749, 0.551889, 0.962306)
+mesh = SubResource("CylinderMesh_1j82k")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("ORMMaterial3D_xbwka")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="stage9/MeshInstance3D2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stage9/MeshInstance3D2/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 2.98023e-08, 1, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("CylinderShape3D_pbd7y")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="stage9"]
+transform = Transform3D(50.8217, 0, 0, 0, 0.553112, 0, 0, 0, 49.0762, 0.199533, -0.155872, 0.750413)
+mesh = SubResource("CylinderMesh_1j82k")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_skujp")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="stage9/MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stage9/MeshInstance3D/StaticBody3D"]
+shape = SubResource("CylinderShape3D_xx231")
+
+[node name="Node3D" type="Node3D" parent="stage9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.40831, 0, -0.659142)
+
+[node name="TV4" type="Node3D" parent="stage9/Node3D"]
+transform = Transform3D(4.90582, 0.00721472, 0.0884068, -0.0138107, 2.55387, -0.000360183, -0.435607, 0.000283305, 0.995652, -2.61162, 6.37167, 5.50508)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="stage9/Node3D/TV4"]
+transform = Transform3D(2.4267, 0, 0, 0, 2.09183, 0, 0, 0, 0.487183, 0, 0, 0)
+mesh = SubResource("BoxMesh_7ldk7")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="stage9/Node3D/TV4"]
+transform = Transform3D(2.25574, 0, 0, 0, 1.77814, 0, 0, 0, 0.0081138, -0.00263291, 0.0261305, 0.254375)
+mesh = SubResource("QuadMesh_ldy45")
+surface_material_override/0 = SubResource("StandardMaterial3D_ms6u1")
+
+[node name="Node2D" type="Node2D" parent="stage9/Node3D/TV4"]
+
+[node name="SubViewport" type="SubViewport" parent="stage9/Node3D/TV4/Node2D"]
+size = Vector2i(150, 75)
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="stage9/Node3D/TV4/Node2D/SubViewport"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+stretch = true
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="stage9/Node3D/TV4/Node2D/SubViewport/SubViewportContainer"]
+layout_mode = 2
+stream = ExtResource("1_pjxwc")
+autoplay = true
+expand = true
+loop = true
+
+[node name="SubViewport" type="SubViewport" parent="stage9/Node3D/TV4/Node2D/SubViewport/SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(150, 75)
+render_target_update_mode = 4
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="stage9/Node3D/TV4"]
+transform = Transform3D(0.400779, 0, 0, 0, 0.672341, 0, 0, 0, 0.281836, -0.754772, -1.73713, -0.0336982)
+mesh = SubResource("CylinderMesh_7c4fe")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="stage9/Node3D/TV4"]
+transform = Transform3D(0.374969, 0, 0, 0, 0.657657, 0, 0, 0, 0.27568, 0.839715, -1.73713, -0.0336982)
+mesh = SubResource("CylinderMesh_7c4fe")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="stage9/Node3D/TV4"]
+physics_material_override = SubResource("PhysicsMaterial_2jrb4")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stage9/Node3D/TV4/StaticBody3D"]
+transform = Transform3D(2.23967, -8.81283e-09, 6.40284e-10, -2.59536e-09, 2.58342, 1.10595e-09, 5.4948e-08, 3.25963e-09, 4.42358, -0.0363538, 0.175564, -3.8147e-06)
+shape = SubResource("BoxShape3D_yc5lm")
+
+[node name="TV" type="Node3D" parent="stage9/Node3D"]
+transform = Transform3D(-4.88805, -0.00722019, -0.122408, -0.0138107, 2.55387, -0.000360183, 0.603139, -3.63828e-05, -0.992046, -4.09646, 6.38893, -6.54499)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="stage9/Node3D/TV"]
+transform = Transform3D(2.4267, 0, 0, 0, 2.09183, 0, 0, 0, 0.487183, 0, 0, 0)
+mesh = SubResource("BoxMesh_7ldk7")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="stage9/Node3D/TV"]
+transform = Transform3D(2.25574, 0, 0, 0, 1.77814, 0, 0, 0, 0.0081138, -0.00263291, 0.0261305, 0.254375)
+mesh = SubResource("QuadMesh_ldy45")
+surface_material_override/0 = SubResource("StandardMaterial3D_ms6u1")
+
+[node name="Node2D" type="Node2D" parent="stage9/Node3D/TV"]
+
+[node name="SubViewport" type="SubViewport" parent="stage9/Node3D/TV/Node2D"]
+size = Vector2i(150, 75)
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="stage9/Node3D/TV/Node2D/SubViewport"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+stretch = true
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="stage9/Node3D/TV/Node2D/SubViewport/SubViewportContainer"]
+layout_mode = 2
+stream = ExtResource("1_pjxwc")
+autoplay = true
+expand = true
+loop = true
+
+[node name="SubViewport" type="SubViewport" parent="stage9/Node3D/TV/Node2D/SubViewport/SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(150, 75)
+render_target_update_mode = 4
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="stage9/Node3D/TV"]
+transform = Transform3D(0.400779, 0, 0, 0, 0.672341, 0, 0, 0, 0.281836, -0.754772, -1.73713, -0.0336982)
+mesh = SubResource("CylinderMesh_7c4fe")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="stage9/Node3D/TV"]
+transform = Transform3D(0.374969, 0, 0, 0, 0.657657, 0, 0, 0, 0.27568, 0.839715, -1.73713, -0.0336982)
+mesh = SubResource("CylinderMesh_7c4fe")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="stage9/Node3D/TV"]
+physics_material_override = SubResource("PhysicsMaterial_2jrb4")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stage9/Node3D/TV/StaticBody3D"]
+transform = Transform3D(2.23967, -8.81283e-09, 6.40284e-10, -2.59536e-09, 2.58342, 1.10595e-09, 5.4948e-08, 3.25963e-09, 4.42358, -0.0363538, 0.175564, -3.8147e-06)
+shape = SubResource("BoxShape3D_yc5lm")
+
+[node name="TV2" type="Node3D" parent="stage9/Node3D"]
+transform = Transform3D(0.803823, 0.000260836, -0.986167, -0.0138107, 2.55387, -0.000360183, 4.85908, 0.00721557, 0.163138, -9.31391, 6.37167, -0.139442)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="stage9/Node3D/TV2"]
+transform = Transform3D(2.4267, 0, 0, 0, 2.09183, 0, 0, 0, 0.487183, 0, 0, 0)
+mesh = SubResource("BoxMesh_7ldk7")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="stage9/Node3D/TV2"]
+transform = Transform3D(2.25574, 0, 0, 0, 1.77814, 0, 0, 0, 0.0081138, -0.00263291, 0.0261305, 0.254375)
+mesh = SubResource("QuadMesh_ldy45")
+surface_material_override/0 = SubResource("StandardMaterial3D_ms6u1")
+
+[node name="Node2D" type="Node2D" parent="stage9/Node3D/TV2"]
+
+[node name="SubViewport" type="SubViewport" parent="stage9/Node3D/TV2/Node2D"]
+size = Vector2i(150, 75)
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="stage9/Node3D/TV2/Node2D/SubViewport"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+stretch = true
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="stage9/Node3D/TV2/Node2D/SubViewport/SubViewportContainer"]
+layout_mode = 2
+stream = ExtResource("1_pjxwc")
+autoplay = true
+expand = true
+loop = true
+
+[node name="SubViewport" type="SubViewport" parent="stage9/Node3D/TV2/Node2D/SubViewport/SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(150, 75)
+render_target_update_mode = 4
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="stage9/Node3D/TV2"]
+transform = Transform3D(0.400779, 0, 0, 0, 0.672341, 0, 0, 0, 0.281836, -0.754772, -1.73713, -0.0336982)
+mesh = SubResource("CylinderMesh_7c4fe")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="stage9/Node3D/TV2"]
+transform = Transform3D(0.374969, 0, 0, 0, 0.657657, 0, 0, 0, 0.27568, 0.839715, -1.73713, -0.0336982)
+mesh = SubResource("CylinderMesh_7c4fe")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="stage9/Node3D/TV2"]
+physics_material_override = SubResource("PhysicsMaterial_2jrb4")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stage9/Node3D/TV2/StaticBody3D"]
+transform = Transform3D(2.23967, -8.81283e-09, 6.40284e-10, -2.59536e-09, 2.58342, 1.10595e-09, 5.4948e-08, 3.25963e-09, 4.42358, -0.0363538, 0.175564, -3.8147e-06)
+shape = SubResource("BoxShape3D_yc5lm")
+
+[node name="TV3" type="Node3D" parent="stage9/Node3D"]
+transform = Transform3D(-0.725702, -0.000144946, 0.98866, -0.0138107, 2.55387, -0.000360183, -4.87137, -0.00721883, -0.147283, 2.7499, 6.43009, -1.03065)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="stage9/Node3D/TV3"]
+transform = Transform3D(2.4267, 0, 0, 0, 2.09183, 0, 0, 0, 0.487183, 0, 0, 0)
+mesh = SubResource("BoxMesh_7ldk7")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="stage9/Node3D/TV3"]
+transform = Transform3D(2.25574, 0, 0, 0, 1.77814, 0, 0, 0, 0.0081138, -0.00263291, 0.0261305, 0.254375)
+mesh = SubResource("QuadMesh_ldy45")
+surface_material_override/0 = SubResource("StandardMaterial3D_ms6u1")
+
+[node name="Node2D" type="Node2D" parent="stage9/Node3D/TV3"]
+
+[node name="SubViewport" type="SubViewport" parent="stage9/Node3D/TV3/Node2D"]
+size = Vector2i(150, 75)
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="stage9/Node3D/TV3/Node2D/SubViewport"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+stretch = true
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="stage9/Node3D/TV3/Node2D/SubViewport/SubViewportContainer"]
+layout_mode = 2
+stream = ExtResource("1_pjxwc")
+autoplay = true
+expand = true
+loop = true
+
+[node name="SubViewport" type="SubViewport" parent="stage9/Node3D/TV3/Node2D/SubViewport/SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(150, 75)
+render_target_update_mode = 4
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="stage9/Node3D/TV3"]
+transform = Transform3D(0.400779, 0, 0, 0, 0.672341, 0, 0, 0, 0.281836, -0.754772, -1.73713, -0.0336982)
+mesh = SubResource("CylinderMesh_7c4fe")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="stage9/Node3D/TV3"]
+transform = Transform3D(0.374969, 0, 0, 0, 0.657657, 0, 0, 0, 0.27568, 0.839715, -1.73713, -0.0336982)
+mesh = SubResource("CylinderMesh_7c4fe")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="stage9/Node3D/TV3"]
+physics_material_override = SubResource("PhysicsMaterial_2jrb4")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stage9/Node3D/TV3/StaticBody3D"]
+transform = Transform3D(2.23967, -8.81283e-09, 6.40284e-10, -2.59536e-09, 2.58342, 1.10595e-09, 5.4948e-08, 3.25963e-09, 4.42358, -0.0363538, 0.175564, -3.8147e-06)
+shape = SubResource("BoxShape3D_yc5lm")
+
+[node name="stage2" type="Node3D" parent="."]
+transform = Transform3D(-0.017784, 0, 0.999842, 0, 1, 0, -0.999842, 0, -0.017784, -78.6617, -5.71896, -14.7134)
+
+[node name="TV" type="Node3D" parent="stage2"]
+transform = Transform3D(4.92512, 0.00716045, -0.00100945, -0.0138107, 2.55387, -0.000360183, 0.00496882, 0.000927529, 0.999568, -1.36384, 6.38893, -11.1627)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="stage2/TV"]
+transform = Transform3D(2.4267, 0, 0, 0, 2.09183, 0, 0, 0, 0.487183, 0, 0, 0)
+mesh = SubResource("BoxMesh_7ldk7")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="stage2/TV"]
+transform = Transform3D(2.25574, 0, 0, 0, 1.77814, 0, 0, 0, 0.0081138, -0.00263291, 0.0261305, 0.254375)
+mesh = SubResource("QuadMesh_ldy45")
+surface_material_override/0 = SubResource("StandardMaterial3D_ms6u1")
+
+[node name="Node2D" type="Node2D" parent="stage2/TV"]
+
+[node name="SubViewport" type="SubViewport" parent="stage2/TV/Node2D"]
+size = Vector2i(150, 75)
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="stage2/TV/Node2D/SubViewport"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+stretch = true
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="stage2/TV/Node2D/SubViewport/SubViewportContainer"]
+layout_mode = 2
+stream = ExtResource("1_pjxwc")
+autoplay = true
+expand = true
+loop = true
+
+[node name="SubViewport" type="SubViewport" parent="stage2/TV/Node2D/SubViewport/SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(150, 75)
+render_target_update_mode = 4
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="stage2/TV"]
+transform = Transform3D(0.400779, 0, 0, 0, 0.672341, 0, 0, 0, 0.281836, -0.754772, -1.73713, -0.0336982)
+mesh = SubResource("CylinderMesh_7c4fe")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="stage2/TV"]
+transform = Transform3D(0.374969, 0, 0, 0, 0.657657, 0, 0, 0, 0.27568, 0.839715, -1.73713, -0.0336982)
+mesh = SubResource("CylinderMesh_7c4fe")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="stage2/TV"]
+physics_material_override = SubResource("PhysicsMaterial_2jrb4")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stage2/TV/StaticBody3D"]
+transform = Transform3D(2.23967, -8.81283e-09, 6.40284e-10, -2.59536e-09, 2.58342, 1.10595e-09, 5.4948e-08, 3.25963e-09, 4.42358, -0.0363538, 0.175564, -3.8147e-06)
+shape = SubResource("BoxShape3D_yc5lm")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="stage2"]
+transform = Transform3D(57.9579, 0, 0, 0, 1, 0, 0, 0, 55.638, 0, -0.880486, 0)
+mesh = SubResource("CylinderMesh_g8eou")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="stage2/MeshInstance3D4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stage2/MeshInstance3D4/StaticBody3D"]
+transform = Transform3D(0.999884, 0, 0, 0, 1, 0, 0, 0, 1.05693, 0, 0, 0)
+shape = SubResource("CylinderShape3D_ilpeb")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="stage2"]
+transform = Transform3D(31.7605, -0.000576313, 0, 0.0687365, 0.266292, 0, 0, 0, 29.7649, -0.140053, 1.16367, 0.644547)
+mesh = SubResource("CylinderMesh_1j82k")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("ORMMaterial3D_ajcwd")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="stage2/MeshInstance3D3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stage2/MeshInstance3D3/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 1.49012e-08, 1, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("CylinderShape3D_r46rh")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="stage2"]
+transform = Transform3D(40.5298, -0.000576015, 0, 0.0877151, 0.266155, 0, 0, 0, 39.6418, -0.357749, 0.551889, 0.962306)
+mesh = SubResource("CylinderMesh_1j82k")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("ORMMaterial3D_xbwka")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="stage2/MeshInstance3D2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stage2/MeshInstance3D2/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 2.98023e-08, 1, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("CylinderShape3D_pbd7y")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="stage2"]
+transform = Transform3D(50.8217, 0, 0, 0, 0.553112, 0, 0, 0, 49.0762, 0.199533, -0.155872, 0.750413)
+mesh = SubResource("CylinderMesh_1j82k")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_skujp")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="stage2/MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stage2/MeshInstance3D/StaticBody3D"]
+shape = SubResource("CylinderShape3D_xx231")
+
+[node name="stage3" type="Node3D" parent="."]
+transform = Transform3D(-0.537255, 0, 0.84342, 0, 1, 0, -0.84342, 0, -0.537255, -68.2186, -5.50508, 43.8992)
+
+[node name="TV" type="Node3D" parent="stage3"]
+transform = Transform3D(4.92512, 0.00716045, -0.00100945, -0.0138107, 2.55387, -0.000360183, 0.00496882, 0.000927529, 0.999568, -1.36384, 6.38893, -11.1627)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="stage3/TV"]
+transform = Transform3D(2.4267, 0, 0, 0, 2.09183, 0, 0, 0, 0.487183, 0, 0, 0)
+mesh = SubResource("BoxMesh_7ldk7")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="stage3/TV"]
+transform = Transform3D(2.25574, 0, 0, 0, 1.77814, 0, 0, 0, 0.0081138, -0.00263291, 0.0261305, 0.254375)
+mesh = SubResource("QuadMesh_ldy45")
+surface_material_override/0 = SubResource("StandardMaterial3D_ms6u1")
+
+[node name="Node2D" type="Node2D" parent="stage3/TV"]
+
+[node name="SubViewport" type="SubViewport" parent="stage3/TV/Node2D"]
+size = Vector2i(150, 75)
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="stage3/TV/Node2D/SubViewport"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+stretch = true
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="stage3/TV/Node2D/SubViewport/SubViewportContainer"]
+layout_mode = 2
+stream = ExtResource("1_pjxwc")
+autoplay = true
+expand = true
+loop = true
+
+[node name="SubViewport" type="SubViewport" parent="stage3/TV/Node2D/SubViewport/SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(150, 75)
+render_target_update_mode = 4
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="stage3/TV"]
+transform = Transform3D(0.400779, 0, 0, 0, 0.672341, 0, 0, 0, 0.281836, -0.754772, -1.73713, -0.0336982)
+mesh = SubResource("CylinderMesh_7c4fe")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="stage3/TV"]
+transform = Transform3D(0.374969, 0, 0, 0, 0.657657, 0, 0, 0, 0.27568, 0.839715, -1.73713, -0.0336982)
+mesh = SubResource("CylinderMesh_7c4fe")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="stage3/TV"]
+physics_material_override = SubResource("PhysicsMaterial_2jrb4")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stage3/TV/StaticBody3D"]
+transform = Transform3D(2.23967, -8.81283e-09, 6.40284e-10, -2.59536e-09, 2.58342, 1.10595e-09, 5.4948e-08, 3.25963e-09, 4.42358, -0.0363538, 0.175564, -3.8147e-06)
+shape = SubResource("BoxShape3D_yc5lm")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="stage3"]
+transform = Transform3D(57.9579, 0, 0, 0, 1, 0, 0, 0, 55.638, 0, -0.880486, 0)
+mesh = SubResource("CylinderMesh_g8eou")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="stage3/MeshInstance3D4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stage3/MeshInstance3D4/StaticBody3D"]
+transform = Transform3D(0.999884, 0, 0, 0, 1, 0, 0, 0, 1.05693, 0, 0, 0)
+shape = SubResource("CylinderShape3D_ilpeb")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="stage3"]
+transform = Transform3D(31.7605, -0.000576313, 0, 0.0687365, 0.266292, 0, 0, 0, 29.7649, -0.140053, 1.16367, 0.644547)
+mesh = SubResource("CylinderMesh_1j82k")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("ORMMaterial3D_ajcwd")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="stage3/MeshInstance3D3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stage3/MeshInstance3D3/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 1.49012e-08, 1, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("CylinderShape3D_r46rh")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="stage3"]
+transform = Transform3D(40.5298, -0.000576015, 0, 0.0877151, 0.266155, 0, 0, 0, 39.6418, -0.357749, 0.551889, 0.962306)
+mesh = SubResource("CylinderMesh_1j82k")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("ORMMaterial3D_xbwka")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="stage3/MeshInstance3D2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stage3/MeshInstance3D2/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 2.98023e-08, 1, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("CylinderShape3D_pbd7y")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="stage3"]
+transform = Transform3D(50.8217, 0, 0, 0, 0.553112, 0, 0, 0, 49.0762, 0.199533, -0.155872, 0.750413)
+mesh = SubResource("CylinderMesh_1j82k")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_skujp")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="stage3/MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stage3/MeshInstance3D/StaticBody3D"]
+shape = SubResource("CylinderShape3D_xx231")
+
+[node name="stage4" type="Node3D" parent="."]
+transform = Transform3D(-0.976889, 0, -0.213746, 0, 1, 0, 0.213746, 0, -0.976889, -19.8813, -5.83444, 85.2199)
+
+[node name="TV" type="Node3D" parent="stage4"]
+transform = Transform3D(4.92512, 0.00716045, -0.00100945, -0.0138107, 2.55387, -0.000360183, 0.00496882, 0.000927529, 0.999568, -1.36384, 6.38893, -11.1627)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="stage4/TV"]
+transform = Transform3D(2.4267, 0, 0, 0, 2.09183, 0, 0, 0, 0.487183, 0, 0, 0)
+mesh = SubResource("BoxMesh_7ldk7")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="stage4/TV"]
+transform = Transform3D(2.25574, 0, 0, 0, 1.77814, 0, 0, 0, 0.0081138, -0.00263291, 0.0261305, 0.254375)
+mesh = SubResource("QuadMesh_ldy45")
+surface_material_override/0 = SubResource("StandardMaterial3D_ms6u1")
+
+[node name="Node2D" type="Node2D" parent="stage4/TV"]
+
+[node name="SubViewport" type="SubViewport" parent="stage4/TV/Node2D"]
+size = Vector2i(150, 75)
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="stage4/TV/Node2D/SubViewport"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+stretch = true
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="stage4/TV/Node2D/SubViewport/SubViewportContainer"]
+layout_mode = 2
+stream = ExtResource("1_pjxwc")
+autoplay = true
+expand = true
+loop = true
+
+[node name="SubViewport" type="SubViewport" parent="stage4/TV/Node2D/SubViewport/SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(150, 75)
+render_target_update_mode = 4
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="stage4/TV"]
+transform = Transform3D(0.400779, 0, 0, 0, 0.672341, 0, 0, 0, 0.281836, -0.754772, -1.73713, -0.0336982)
+mesh = SubResource("CylinderMesh_7c4fe")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="stage4/TV"]
+transform = Transform3D(0.374969, 0, 0, 0, 0.657657, 0, 0, 0, 0.27568, 0.839715, -1.73713, -0.0336982)
+mesh = SubResource("CylinderMesh_7c4fe")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="stage4/TV"]
+physics_material_override = SubResource("PhysicsMaterial_2jrb4")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stage4/TV/StaticBody3D"]
+transform = Transform3D(2.23967, -8.81283e-09, 6.40284e-10, -2.59536e-09, 2.58342, 1.10595e-09, 5.4948e-08, 3.25963e-09, 4.42358, -0.0363538, 0.175564, -3.8147e-06)
+shape = SubResource("BoxShape3D_yc5lm")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="stage4"]
+transform = Transform3D(57.9579, 0, 0, 0, 1, 0, 0, 0, 55.638, 0, -0.880486, 0)
+mesh = SubResource("CylinderMesh_g8eou")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="stage4/MeshInstance3D4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stage4/MeshInstance3D4/StaticBody3D"]
+transform = Transform3D(0.999884, 0, 0, 0, 1, 0, 0, 0, 1.05693, 0, 0, 0)
+shape = SubResource("CylinderShape3D_ilpeb")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="stage4"]
+transform = Transform3D(31.7605, -0.000576313, 0, 0.0687365, 0.266292, 0, 0, 0, 29.7649, -0.140053, 1.16367, 0.644547)
+mesh = SubResource("CylinderMesh_1j82k")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("ORMMaterial3D_ajcwd")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="stage4/MeshInstance3D3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stage4/MeshInstance3D3/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 1.49012e-08, 1, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("CylinderShape3D_r46rh")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="stage4"]
+transform = Transform3D(40.5298, -0.000576015, 0, 0.0877151, 0.266155, 0, 0, 0, 39.6418, -0.357749, 0.551889, 0.962306)
+mesh = SubResource("CylinderMesh_1j82k")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("ORMMaterial3D_xbwka")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="stage4/MeshInstance3D2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stage4/MeshInstance3D2/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 2.98023e-08, 1, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("CylinderShape3D_pbd7y")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="stage4"]
+transform = Transform3D(50.8217, 0, 0, 0, 0.553112, 0, 0, 0, 49.0762, 0.199533, -0.155872, 0.750413)
+mesh = SubResource("CylinderMesh_1j82k")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_skujp")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="stage4/MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stage4/MeshInstance3D/StaticBody3D"]
+shape = SubResource("CylinderShape3D_xx231")
+
+[node name="stage5" type="Node3D" parent="."]
+transform = Transform3D(-0.624279, -0.0215658, -0.780903, 0.00889801, 0.999358, -0.0347121, 0.781151, -0.0286186, -0.623687, 40.5045, -4.9793, 65.8283)
+
+[node name="TV" type="Node3D" parent="stage5"]
+transform = Transform3D(4.92512, 0.00716045, -0.00100945, -0.0138107, 2.55387, -0.000360183, 0.00496882, 0.000927529, 0.999568, -1.36384, 6.38893, -11.1627)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="stage5/TV"]
+transform = Transform3D(2.4267, 0, 0, 0, 2.09183, 0, 0, 0, 0.487183, 0, 0, 0)
+mesh = SubResource("BoxMesh_7ldk7")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="stage5/TV"]
+transform = Transform3D(2.25574, 0, 0, 0, 1.77814, 0, 0, 0, 0.0081138, -0.00263291, 0.0261305, 0.254375)
+mesh = SubResource("QuadMesh_ldy45")
+surface_material_override/0 = SubResource("StandardMaterial3D_ms6u1")
+
+[node name="Node2D" type="Node2D" parent="stage5/TV"]
+
+[node name="SubViewport" type="SubViewport" parent="stage5/TV/Node2D"]
+size = Vector2i(150, 75)
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="stage5/TV/Node2D/SubViewport"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+stretch = true
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="stage5/TV/Node2D/SubViewport/SubViewportContainer"]
+layout_mode = 2
+stream = ExtResource("1_pjxwc")
+autoplay = true
+expand = true
+loop = true
+
+[node name="SubViewport" type="SubViewport" parent="stage5/TV/Node2D/SubViewport/SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(150, 75)
+render_target_update_mode = 4
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="stage5/TV"]
+transform = Transform3D(0.400779, 0, 0, 0, 0.672341, 0, 0, 0, 0.281836, -0.754772, -1.73713, -0.0336982)
+mesh = SubResource("CylinderMesh_7c4fe")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="stage5/TV"]
+transform = Transform3D(0.374969, 0, 0, 0, 0.657657, 0, 0, 0, 0.27568, 0.839715, -1.73713, -0.0336982)
+mesh = SubResource("CylinderMesh_7c4fe")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="stage5/TV"]
+physics_material_override = SubResource("PhysicsMaterial_2jrb4")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stage5/TV/StaticBody3D"]
+transform = Transform3D(2.23967, -8.81283e-09, 6.40284e-10, -2.59536e-09, 2.58342, 1.10595e-09, 5.4948e-08, 3.25963e-09, 4.42358, -0.0363538, 0.175564, -3.8147e-06)
+shape = SubResource("BoxShape3D_yc5lm")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="stage5"]
+transform = Transform3D(57.9579, 0, 0, 0, 1, 0, 0, 0, 55.638, 0, -0.880486, 0)
+mesh = SubResource("CylinderMesh_g8eou")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="stage5/MeshInstance3D4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stage5/MeshInstance3D4/StaticBody3D"]
+transform = Transform3D(0.999884, 0, 0, 0, 1, 0, 0, 0, 1.05693, 0, 0, 0)
+shape = SubResource("CylinderShape3D_ilpeb")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="stage5"]
+transform = Transform3D(31.7605, -0.000576313, 0, 0.0687365, 0.266292, 0, 0, 0, 29.7649, -0.140053, 1.16367, 0.644547)
+mesh = SubResource("CylinderMesh_1j82k")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("ORMMaterial3D_ajcwd")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="stage5/MeshInstance3D3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stage5/MeshInstance3D3/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 1.49012e-08, 1, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("CylinderShape3D_r46rh")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="stage5"]
+transform = Transform3D(40.5298, -0.000576015, 0, 0.0877151, 0.266155, 0, 0, 0, 39.6418, -0.357749, 0.551889, 0.962306)
+mesh = SubResource("CylinderMesh_1j82k")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("ORMMaterial3D_xbwka")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="stage5/MeshInstance3D2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stage5/MeshInstance3D2/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 2.98023e-08, 1, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("CylinderShape3D_pbd7y")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="stage5"]
+transform = Transform3D(50.8217, 0, 0, 0, 0.553112, 0, 0, 0, 49.0762, 0.199533, -0.155872, 0.750413)
+mesh = SubResource("CylinderMesh_1j82k")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_skujp")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="stage5/MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stage5/MeshInstance3D/StaticBody3D"]
+shape = SubResource("CylinderShape3D_xx231")
+
+[node name="stage6" type="Node3D" parent="."]
+transform = Transform3D(-0.199077, 0, -0.979984, 0, 1, 0, 0.979984, 0, -0.199077, 72.3857, -6.73693, 11.9813)
+
+[node name="TV" type="Node3D" parent="stage6"]
+transform = Transform3D(4.92512, 0.00716045, -0.00100945, -0.0138107, 2.55387, -0.000360183, 0.00496882, 0.000927529, 0.999568, -1.36384, 6.38893, -11.1627)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="stage6/TV"]
+transform = Transform3D(2.4267, 0, 0, 0, 2.09183, 0, 0, 0, 0.487183, 0, 0, 0)
+mesh = SubResource("BoxMesh_7ldk7")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="stage6/TV"]
+transform = Transform3D(2.25574, 0, 0, 0, 1.77814, 0, 0, 0, 0.0081138, -0.00263291, 0.0261305, 0.254375)
+mesh = SubResource("QuadMesh_ldy45")
+surface_material_override/0 = SubResource("StandardMaterial3D_ms6u1")
+
+[node name="Node2D" type="Node2D" parent="stage6/TV"]
+
+[node name="SubViewport" type="SubViewport" parent="stage6/TV/Node2D"]
+size = Vector2i(150, 75)
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="stage6/TV/Node2D/SubViewport"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+stretch = true
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="stage6/TV/Node2D/SubViewport/SubViewportContainer"]
+layout_mode = 2
+stream = ExtResource("1_pjxwc")
+autoplay = true
+expand = true
+loop = true
+
+[node name="SubViewport" type="SubViewport" parent="stage6/TV/Node2D/SubViewport/SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(150, 75)
+render_target_update_mode = 4
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="stage6/TV"]
+transform = Transform3D(0.400779, 0, 0, 0, 0.672341, 0, 0, 0, 0.281836, -0.754772, -1.73713, -0.0336982)
+mesh = SubResource("CylinderMesh_7c4fe")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="stage6/TV"]
+transform = Transform3D(0.374969, 0, 0, 0, 0.657657, 0, 0, 0, 0.27568, 0.839715, -1.73713, -0.0336982)
+mesh = SubResource("CylinderMesh_7c4fe")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="stage6/TV"]
+physics_material_override = SubResource("PhysicsMaterial_2jrb4")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stage6/TV/StaticBody3D"]
+transform = Transform3D(2.23967, -8.81283e-09, 6.40284e-10, -2.59536e-09, 2.58342, 1.10595e-09, 5.4948e-08, 3.25963e-09, 4.42358, -0.0363538, 0.175564, -3.8147e-06)
+shape = SubResource("BoxShape3D_yc5lm")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="stage6"]
+transform = Transform3D(57.9579, 0, 0, 0, 1, 0, 0, 0, 55.638, 0, -0.880486, 0)
+mesh = SubResource("CylinderMesh_g8eou")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="stage6/MeshInstance3D4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stage6/MeshInstance3D4/StaticBody3D"]
+transform = Transform3D(0.999884, 0, 0, 0, 1, 0, 0, 0, 1.05693, 0, 0, 0)
+shape = SubResource("CylinderShape3D_ilpeb")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="stage6"]
+transform = Transform3D(31.7605, -0.000576313, 0, 0.0687365, 0.266292, 0, 0, 0, 29.7649, -0.140053, 1.16367, 0.644547)
+mesh = SubResource("CylinderMesh_1j82k")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("ORMMaterial3D_ajcwd")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="stage6/MeshInstance3D3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stage6/MeshInstance3D3/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 1.49012e-08, 1, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("CylinderShape3D_r46rh")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="stage6"]
+transform = Transform3D(40.5298, -0.000576015, 0, 0.0877151, 0.266155, 0, 0, 0, 39.6418, -0.357749, 0.551889, 0.962306)
+mesh = SubResource("CylinderMesh_1j82k")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("ORMMaterial3D_xbwka")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="stage6/MeshInstance3D2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stage6/MeshInstance3D2/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 2.98023e-08, 1, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("CylinderShape3D_pbd7y")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="stage6"]
+transform = Transform3D(50.8217, 0, 0, 0, 0.553112, 0, 0, 0, 49.0762, 0.199533, -0.155872, 0.750413)
+mesh = SubResource("CylinderMesh_1j82k")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_skujp")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="stage6/MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stage6/MeshInstance3D/StaticBody3D"]
+shape = SubResource("CylinderShape3D_xx231")
+
+[node name="stage7" type="Node3D" parent="."]
+transform = Transform3D(0.491332, -0.000234293, -0.870972, 0.000897055, 1, 0.000237062, 0.870972, -0.000897782, 0.491332, 60.1747, -5.63848, -48.6472)
+
+[node name="TV" type="Node3D" parent="stage7"]
+transform = Transform3D(4.92512, 0.00716045, -0.00100945, -0.0138107, 2.55387, -0.000360183, 0.00496882, 0.000927529, 0.999568, -1.36384, 6.38893, -11.1627)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="stage7/TV"]
+transform = Transform3D(2.4267, 0, 0, 0, 2.09183, 0, 0, 0, 0.487183, 0, 0, 0)
+mesh = SubResource("BoxMesh_7ldk7")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="stage7/TV"]
+transform = Transform3D(2.25574, 0, 0, 0, 1.77814, 0, 0, 0, 0.0081138, -0.00263291, 0.0261305, 0.254375)
+mesh = SubResource("QuadMesh_ldy45")
+surface_material_override/0 = SubResource("StandardMaterial3D_ms6u1")
+
+[node name="Node2D" type="Node2D" parent="stage7/TV"]
+
+[node name="SubViewport" type="SubViewport" parent="stage7/TV/Node2D"]
+size = Vector2i(150, 75)
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="stage7/TV/Node2D/SubViewport"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+stretch = true
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="stage7/TV/Node2D/SubViewport/SubViewportContainer"]
+layout_mode = 2
+stream = ExtResource("1_pjxwc")
+autoplay = true
+expand = true
+loop = true
+
+[node name="SubViewport" type="SubViewport" parent="stage7/TV/Node2D/SubViewport/SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(150, 75)
+render_target_update_mode = 4
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="stage7/TV"]
+transform = Transform3D(0.400779, 0, 0, 0, 0.672341, 0, 0, 0, 0.281836, -0.754772, -1.73713, -0.0336982)
+mesh = SubResource("CylinderMesh_7c4fe")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="stage7/TV"]
+transform = Transform3D(0.374969, 0, 0, 0, 0.657657, 0, 0, 0, 0.27568, 0.839715, -1.73713, -0.0336982)
+mesh = SubResource("CylinderMesh_7c4fe")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="stage7/TV"]
+physics_material_override = SubResource("PhysicsMaterial_2jrb4")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stage7/TV/StaticBody3D"]
+transform = Transform3D(2.23967, -8.81283e-09, 6.40284e-10, -2.59536e-09, 2.58342, 1.10595e-09, 5.4948e-08, 3.25963e-09, 4.42358, -0.0363538, 0.175564, -3.8147e-06)
+shape = SubResource("BoxShape3D_yc5lm")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="stage7"]
+transform = Transform3D(57.9579, 0, 0, 0, 1, 0, 0, 0, 55.638, 0, -0.880486, 0)
+mesh = SubResource("CylinderMesh_g8eou")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="stage7/MeshInstance3D4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stage7/MeshInstance3D4/StaticBody3D"]
+transform = Transform3D(0.999884, 0, 0, 0, 1, 0, 0, 0, 1.05693, 0, 0, 0)
+shape = SubResource("CylinderShape3D_ilpeb")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="stage7"]
+transform = Transform3D(31.7605, -0.000576313, 0, 0.0687365, 0.266292, 0, 0, 0, 29.7649, -0.140053, 1.16367, 0.644547)
+mesh = SubResource("CylinderMesh_1j82k")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("ORMMaterial3D_ajcwd")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="stage7/MeshInstance3D3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stage7/MeshInstance3D3/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 1.49012e-08, 1, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("CylinderShape3D_r46rh")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="stage7"]
+transform = Transform3D(40.5298, -0.000576015, 0, 0.0877151, 0.266155, 0, 0, 0, 39.6418, -0.357749, 0.551889, 0.962306)
+mesh = SubResource("CylinderMesh_1j82k")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("ORMMaterial3D_xbwka")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="stage7/MeshInstance3D2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stage7/MeshInstance3D2/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 2.98023e-08, 1, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("CylinderShape3D_pbd7y")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="stage7"]
+transform = Transform3D(50.8217, 0, 0, 0, 0.553112, 0, 0, 0, 49.0762, 0.199533, -0.155872, 0.750413)
+mesh = SubResource("CylinderMesh_1j82k")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_skujp")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="stage7/MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stage7/MeshInstance3D/StaticBody3D"]
+shape = SubResource("CylinderShape3D_xx231")
+
+[node name="stage8" type="Node3D" parent="."]
+transform = Transform3D(0.873391, -0.000668038, -0.487019, 0.000897055, 1, 0.000237062, 0.487018, -0.000643919, 0.873392, 9.84817, -5.61155, -84.9043)
+
+[node name="TV" type="Node3D" parent="stage8"]
+transform = Transform3D(4.92512, 0.00716045, -0.00100945, -0.0138107, 2.55387, -0.000360183, 0.00496882, 0.000927529, 0.999568, -1.36384, 6.38893, -11.1627)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="stage8/TV"]
+transform = Transform3D(2.4267, 0, 0, 0, 2.09183, 0, 0, 0, 0.487183, 0, 0, 0)
+mesh = SubResource("BoxMesh_7ldk7")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="stage8/TV"]
+transform = Transform3D(2.25574, 0, 0, 0, 1.77814, 0, 0, 0, 0.0081138, -0.00263291, 0.0261305, 0.254375)
+mesh = SubResource("QuadMesh_ldy45")
+surface_material_override/0 = SubResource("StandardMaterial3D_ms6u1")
+
+[node name="Node2D" type="Node2D" parent="stage8/TV"]
+
+[node name="SubViewport" type="SubViewport" parent="stage8/TV/Node2D"]
+size = Vector2i(150, 75)
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="stage8/TV/Node2D/SubViewport"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+stretch = true
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="stage8/TV/Node2D/SubViewport/SubViewportContainer"]
+layout_mode = 2
+stream = ExtResource("1_pjxwc")
+autoplay = true
+expand = true
+loop = true
+
+[node name="SubViewport" type="SubViewport" parent="stage8/TV/Node2D/SubViewport/SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(150, 75)
+render_target_update_mode = 4
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="stage8/TV"]
+transform = Transform3D(0.400779, 0, 0, 0, 0.672341, 0, 0, 0, 0.281836, -0.754772, -1.73713, -0.0336982)
+mesh = SubResource("CylinderMesh_7c4fe")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="stage8/TV"]
+transform = Transform3D(0.374969, 0, 0, 0, 0.657657, 0, 0, 0, 0.27568, 0.839715, -1.73713, -0.0336982)
+mesh = SubResource("CylinderMesh_7c4fe")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="stage8/TV"]
+physics_material_override = SubResource("PhysicsMaterial_2jrb4")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stage8/TV/StaticBody3D"]
+transform = Transform3D(2.23967, -8.81283e-09, 6.40284e-10, -2.59536e-09, 2.58342, 1.10595e-09, 5.4948e-08, 3.25963e-09, 4.42358, -0.0363538, 0.175564, -3.8147e-06)
+shape = SubResource("BoxShape3D_yc5lm")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="stage8"]
+transform = Transform3D(57.9579, 0, 0, 0, 1, 0, 0, 0, 55.638, 0, -0.880486, 0)
+mesh = SubResource("CylinderMesh_g8eou")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="stage8/MeshInstance3D4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stage8/MeshInstance3D4/StaticBody3D"]
+transform = Transform3D(0.999884, 0, 0, 0, 1, 0, 0, 0, 1.05693, 0, 0, 0)
+shape = SubResource("CylinderShape3D_ilpeb")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="stage8"]
+transform = Transform3D(31.7605, -0.000576313, 0, 0.0687365, 0.266292, 0, 0, 0, 29.7649, -0.140053, 1.16367, 0.644547)
+mesh = SubResource("CylinderMesh_1j82k")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("ORMMaterial3D_ajcwd")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="stage8/MeshInstance3D3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stage8/MeshInstance3D3/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 1.49012e-08, 1, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("CylinderShape3D_r46rh")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="stage8"]
+transform = Transform3D(40.5298, -0.000576015, 0, 0.0877151, 0.266155, 0, 0, 0, 39.6418, -0.357749, 0.551889, 0.962306)
+mesh = SubResource("CylinderMesh_1j82k")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("ORMMaterial3D_xbwka")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="stage8/MeshInstance3D2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stage8/MeshInstance3D2/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 2.98023e-08, 1, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("CylinderShape3D_pbd7y")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="stage8"]
+transform = Transform3D(50.8217, 0, 0, 0, 0.553112, 0, 0, 0, 49.0762, 0.199533, -0.155872, 0.750413)
+mesh = SubResource("CylinderMesh_1j82k")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_skujp")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="stage8/MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stage8/MeshInstance3D/StaticBody3D"]
+shape = SubResource("CylinderShape3D_xx231")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(219.22, 0, 0, 0, -0.00986087, 0, 0, 0, 245.16, 0, -7.99386, 0)
+mesh = SubResource("CylinderMesh_y1u8l")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("CylinderShape3D_m3cnj")
+
+[node name="Logo" parent="." instance=ExtResource("2_ibnq3")]
+transform = Transform3D(6.18804, 0, 0.11212, 0, 2.92043, 0, -0.689836, 0, 1.00575, -5.09042, -0.13372, 0.0523516)
+
+[node name="Logo2" parent="." instance=ExtResource("2_ibnq3")]
+transform = Transform3D(-6.18834, 0, -0.111681, 0, 2.92043, 0, 0.687136, 0, -1.0058, -5.07269, -0.0933638, -1.04983)
