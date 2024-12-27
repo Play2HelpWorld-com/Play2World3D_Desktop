@@ -1,0 +1,41 @@
+[gd_scene load_steps=10 format=3 uid="uid://b1d0iv837i05a"]
+
+[ext_resource type="PackedScene" uid="uid://b7thekyah17uv" path="res://data/scene/Play2World/screens/Screen1.tscn" id="1_3uiwa"]
+[ext_resource type="PackedScene" uid="uid://deogfgyy36b78" path="res://data/scene/Play2World/screens/Screen2.tscn" id="2_fo25g"]
+[ext_resource type="PackedScene" uid="uid://qp0ru4vtfwr3" path="res://data/scene/Play2World/screens/Screen3.tscn" id="3_rtn3y"]
+[ext_resource type="PackedScene" uid="uid://cx8a6a7070mt5" path="res://data/scene/Play2World/screens/Screen4.tscn" id="4_cxe64"]
+[ext_resource type="PackedScene" uid="uid://dyqbolpdc6u4o" path="res://data/scene/Play2World/screens/Screen5.tscn" id="5_2pg7a"]
+[ext_resource type="PackedScene" uid="uid://bshpi2dtoy14n" path="res://data/scene/Play2World/screens/Screen6.tscn" id="6_w6pq8"]
+[ext_resource type="PackedScene" uid="uid://ht7j3swhvkpk" path="res://data/scene/Play2World/screens/Screen7.tscn" id="7_mut0o"]
+[ext_resource type="PackedScene" uid="uid://x4nnt2eeheth" path="res://data/scene/Play2World/screens/Screen8.tscn" id="8_0jabv"]
+[ext_resource type="PackedScene" uid="uid://bfuc6kooh5fmy" path="res://data/scene/Play2World/screens/Screen9.tscn" id="9_t7dwu"]
+
+[node name="Screens" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.3, 0)
+
+[node name="Screen1" parent="." instance=ExtResource("1_3uiwa")]
+transform = Transform3D(-0.704956, 0, -0.709251, 0, 1, 0, 0.709251, 0, -0.704956, 397.795, 0, -40.8518)
+
+[node name="Screen2" parent="." instance=ExtResource("2_fo25g")]
+transform = Transform3D(-0.965345, 0, -0.260976, 0, 1, 0, 0.260976, 0, -0.965345, 245.465, 0, 58.6975)
+
+[node name="Screen3" parent="." instance=ExtResource("3_rtn3y")]
+transform = Transform3D(-0.848085, 0, 0.52986, 0, 1, 0, -0.52986, 0, -0.848085, 37.3249, 0, 22.1622)
+
+[node name="Screen4" parent="." instance=ExtResource("4_cxe64")]
+transform = Transform3D(-0.238584, 0, 0.971122, 0, 1, 0, -0.971122, 0, -0.238584, -89.2657, 0, -136.924)
+
+[node name="Screen5" parent="." instance=ExtResource("5_2pg7a")]
+transform = Transform3D(0.437492, 0, 0.899222, 0, 1, 0, -0.899222, 0, 0.437492, -83.8211, 0, -338.094)
+
+[node name="Screen6" parent="." instance=ExtResource("6_w6pq8")]
+transform = Transform3D(0.891268, 0, 0.453477, 0, 1, 0, -0.453477, 0, 0.891268, 47.2483, 0, -480.06)
+
+[node name="Screen7" parent="." instance=ExtResource("7_mut0o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 216.881, 0, -515.685)
+
+[node name="Screen8" parent="." instance=ExtResource("8_0jabv")]
+transform = Transform3D(0.829818, 0, -0.558035, 0, 1, 0, 0.558035, 0, 0.829818, 381.152, 0, -438.674)
+
+[node name="Screen9" parent="." instance=ExtResource("9_t7dwu")]
+transform = Transform3D(-0.0758141, 0, -0.997122, 0, 1, 0, 0.997122, 0, -0.0758141, 470.243, 0, -211.694)
