@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://b1bfav30mnrir"]
+
+[ext_resource type="Texture2D" uid="uid://b87hub8ki42xj" path="res://assets/images/play2health.png" id="1_3sx05"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_srxph"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1.32264, 0, 0, 0, 0.909788, -3.68335, 1.53332, 0.180603)
+size = Vector3(8.3667, 5.29311, 0.638794)
+material = SubResource("StandardMaterial3D_srxph")
+
+[node name="Sprite3D" type="Sprite3D" parent="CSGBox3D"]
+transform = Transform3D(0.4038, 0, 0, 0, 0.260045, 0, 0, 0, 1.35904, 0, 0, 0.323133)
+texture = ExtResource("1_3sx05")
