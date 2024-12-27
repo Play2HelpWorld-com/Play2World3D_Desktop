@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://dbv7xvbqvmyx0"]
+[gd_scene load_steps=20 format=3 uid="uid://dbv7xvbqvmyx0"]
 
 [ext_resource type="PackedScene" uid="uid://cekjrjqcl4bu5" path="res://data/scene/Play2World/maps/center_map/Tiles_map0.tscn" id="1_1ddmg"]
 [ext_resource type="PackedScene" uid="uid://c5ndqrparso5a" path="res://data/scene/Play2World/objects/p_2_wbillboard.tscn" id="4_qbaij"]
@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://d77wtx4ofpyc" path="res://data/scene/Play2World/maps/center_map/circular_village.tscn" id="15_xw5hy"]
 [ext_resource type="PackedScene" uid="uid://4qycsquka2r2" path="res://data/scene/Play2World/maps/center_map/scoreboard_area.tscn" id="16_s8g6m"]
 [ext_resource type="PackedScene" uid="uid://uan7xu6y7rg7" path="res://data/scene/Play2World/maps/center_map/Tiles_bridge.tscn" id="18_xarn8"]
+[ext_resource type="PackedScene" uid="uid://b1d0iv837i05a" path="res://data/Images and Videos/screensall.tscn" id="19_txl87"]
 
 [node name="Map0" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
@@ -30,7 +31,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, -199, 30)
 [node name="LargeBlock" parent="Ground" instance=ExtResource("6_r57px")]
 
 [node name="P2Wbillboard" parent="Ground/LargeBlock" instance=ExtResource("4_qbaij")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 19, -12.1596)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 19.1774, -12.1596)
 
 [node name="center_objects" type="GridMap" parent="Ground/LargeBlock"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 19, -12.1596)
@@ -176,6 +177,7 @@ transform = Transform3D(0.999038, 0, -0.0438636, 0, 1, 0, 0.0438636, 0, 0.999038
 transform = Transform3D(0.708246, 0.163339, -0.686809, -0.0238983, 0.977856, 0.207912, 0.70556, -0.130839, 0.696467, -138.363, 12.5205, -313.715)
 
 [node name="Trees" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.83932, 0)
 
 [node name="Objects" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
@@ -188,3 +190,9 @@ transform = Transform3D(2.98023e-08, 0, 1, 0, 1, 0, -1, 0, 2.98023e-08, 17, -24,
 
 [node name="ScoreboardArea" parent="." instance=ExtResource("16_s8g6m")]
 transform = Transform3D(0.882947, 0, 0.469471, 0, 1, 0, -0.469471, 0, 0.882947, -180.487, -79, -244.82)
+
+[node name="Screens2" parent="." instance=ExtResource("19_txl87")]
+transform = Transform3D(0.51438, 0, 0, 0, 0.735608, 0, 0, 0, 0.508123, -54.9293, -1.69999, -382.676)
+
+[node name="P2Wbillboard2" parent="." instance=ExtResource("4_qbaij")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.6101, 1.16428, -513.804)
