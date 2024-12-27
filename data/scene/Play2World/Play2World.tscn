@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://6jl62aanwead"]
+[gd_scene load_steps=18 format=3 uid="uid://6jl62aanwead"]
 
 [ext_resource type="Script" path="res://src/Map.gd" id="1_pco4e"]
 [ext_resource type="Script" path="res://src/Teams.gd" id="2_5qeng"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://bcwh7ut700yg" path="res://data/scene/Play2World/maps/map_3.tscn" id="11_kk0of"]
 [ext_resource type="PackedScene" uid="uid://bb785kyru02i" path="res://data/scene/Play2World/maps/map_4.tscn" id="12_6u8j7"]
 [ext_resource type="PackedScene" uid="uid://f1ilxsxq05gx" path="res://data/scene/Play2World/maps/map_5.tscn" id="13_tterk"]
+[ext_resource type="PackedScene" uid="uid://d1ig42f76a3wx" path="res://data/Images and Videos/stage.tscn" id="14_714kr"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_20qs4"]
 sky_top_color = Color(0.685566, 0.615091, 0.735107, 1)
@@ -66,3 +67,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 438.915, 1.5, 1076.9)
 
 [node name="Map5" parent="." instance=ExtResource("13_tterk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -778.884, 1.5, 1054.32)
+
+[node name="Stage" parent="." instance=ExtResource("14_714kr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 183.897, 11.0157, 158.034)

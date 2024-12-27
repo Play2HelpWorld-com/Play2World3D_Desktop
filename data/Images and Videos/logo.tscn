@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://qb22rttv2avq"]
+
+[ext_resource type="Texture2D" uid="uid://dwailp4lg4osl" path="res://data/Images and Videos/Play2WorkWorld_Logo_3_rgb.png" id="1_kerfu"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_6rhu2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5ore3"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_mtcts"]
+
+[node name="Logo" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.34349, 0, 0, 0, -0.0204136, -1.02525, 0, 1.00038, -0.0209211, 0, 1.50313, -0.381404)
+mesh = SubResource("PlaneMesh_6rhu2")
+surface_material_override/0 = SubResource("StandardMaterial3D_5ore3")
+
+[node name="Sprite3D" type="Sprite3D" parent="MeshInstance3D"]
+transform = Transform3D(0.0951959, 0, 0, 0, -0.00125388, 0.884632, 0, -0.100332, -0.0110555, 0, 0.0126452, -0.000258088)
+texture = ExtResource("1_kerfu")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.84284, 0, 0, 0, 2.2141, 0, 0, 0, 0.201758, 0, 1.49529, -0.47885)
+mesh = SubResource("BoxMesh_mtcts")
