@@ -58,16 +58,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -29, 0)
 transform = Transform3D(-0.668495, 0, -0.743717, 0, 1, 0, 0.743717, 0, -0.668495, -1105.22, -25.5432, -862.347)
 
 [node name="Map2" parent="." instance=ExtResource("10_6eyy1")]
-transform = Transform3D(0.444213, 0, -0.895921, 0, 1, 0, 0.895921, 0, 0.444213, -314.049, -280.149, -1459.99)
+transform = Transform3D(0.707008, 0, -0.707205, 0, 1, 0, 0.707205, 0, 0.707008, -447.697, -280.149, -1376.75)
 
 [node name="Map3" parent="." instance=ExtResource("11_kk0of")]
-transform = Transform3D(0.20798, 0, -0.978133, 0, 1, 0, 0.978133, 0, 0.20798, 649.521, -278.703, -1472.38)
+transform = Transform3D(0.689114, 0, -0.724653, 0, 1, 0, 0.724653, 0, 0.689114, 286.168, -337.223, -1183.37)
 
 [node name="Map4" parent="." instance=ExtResource("12_6u8j7")]
-transform = Transform3D(-0.997069, 0, 0.0765102, 0, 1, 0, -0.0765102, 0, -0.997069, 939.139, -629.083, -529.409)
+transform = Transform3D(-0.607001, 0, -0.794701, 0, 1, 0, 0.794701, 0, -0.607001, 678.724, -343.972, -916.848)
 
 [node name="Map5" parent="." instance=ExtResource("13_tterk")]
-transform = Transform3D(-0.972231, 0, -0.234022, 0, 1, 0, 0.234022, 0, -0.972231, 490.854, -179.37, 17.6519)
+transform = Transform3D(-0.972231, 0, -0.234022, 0, 1, 0, 0.234022, 0, -0.972231, 456.736, -179.37, 17.6519)
 
 [node name="Bridges" type="Node3D" parent="."]
 
@@ -81,19 +81,19 @@ transform = Transform3D(0.415598, 0, -0.909548, 0, 1, 0, 0.909548, 0, 0.415598, 
 transform = Transform3D(-0.528868, 0, -0.848704, 0, 1, 0, 0.848704, 0, -0.528868, 160.226, -52.6227, -801.802)
 
 [node name="village_tiles4" parent="Bridges" instance=ExtResource("13_xh0pv")]
-transform = Transform3D(0.974264, 0, 0.22541, 0, 1, 0, -0.22541, 0, 0.974264, 295.218, -52.6227, -609.71)
+transform = Transform3D(0.784398, 0, 0.620258, 0, 1, 0, -0.620258, 0, 0.784398, 279.998, -52.6227, -648.779)
 
 [node name="village_tiles5" parent="Bridges" instance=ExtResource("13_xh0pv")]
 transform = Transform3D(0.625311, 0, -0.780376, 0, 1, 0, 0.780376, 0, 0.625311, 236.621, -52.6227, -344.826)
 
 [node name="Map6" parent="." instance=ExtResource("14_jjr7w")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1480.61, -192.122, -1282.96)
+transform = Transform3D(0.999268, 0, -0.0382657, 0, 1, 0, 0.0382657, 0, 0.999268, -632.714, -303.902, -819.077)
 
 [node name="Map7" parent="." instance=ExtResource("15_yrqby")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -909.187, -200.461, -2105.52)
+transform = Transform3D(-0.145703, 0, -0.989329, 0, 1, 0, 0.989329, 0, -0.145703, 792.757, -303.197, -375.977)
 
 [node name="Map8" parent="." instance=ExtResource("16_rciwc")]
-transform = Transform3D(-0.82081, 0, 0.571201, 0, 1, 0, -0.571201, 0, -0.82081, 339.8, -201.019, 857.599)
+transform = Transform3D(-0.990686, 0, -0.136165, 0, 1, 0, 0.136165, 0, -0.990686, 53.3417, -201.019, 671.329)
 
 [node name="Map9" parent="." instance=ExtResource("17_lgn1f")]
-transform = Transform3D(-0.947255, 0, 0.320481, 0, 1, 0, -0.320481, 0, -0.947255, -429.712, -244.906, 599.815)
+transform = Transform3D(-0.947255, 0, 0.320481, 0, 1, 0, -0.320481, 0, -0.947255, -520.955, -244.906, 461.44)
