@@ -1,12 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://d0kbidr4cxh2d"]
+[gd_scene load_steps=7 format=3 uid="uid://d0kbidr4cxh2d"]
 
 [ext_resource type="PackedScene" uid="uid://d2fsx2v5q7ryu" path="res://data/scene/Play2World/maps/map6/Tiles_map6.tscn" id="1_ij6nm"]
 [ext_resource type="PackedScene" uid="uid://dotydvraqq6kt" path="res://data/scene/Play2World/maps/map6/Tiles_lobby_map6.tscn" id="2_wp6ru"]
+[ext_resource type="PackedScene" uid="uid://ydb61ihdv0ee" path="res://data/scene/Play2World/Scoreboard.tscn" id="3_pyacg"]
+[ext_resource type="PackedScene" uid="uid://djliiil2h1gan" path="res://data/scene/Play2World/maps/map1/Tiles_leaderboard_map1.tscn" id="4_a1rt1"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2yo1h"]
+albedo_color = Color(0.173606, 0.295257, 0.414138, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0x7y3"]
+albedo_color = Color(0.639486, 0.712092, 1, 1)
 
 [node name="Map6" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 
 [node name="Ground" type="Node3D" parent="."]
+transform = Transform3D(-0.77178, 0, -0.63589, 0, 1, 0, 0.63589, 0, -0.77178, 0, 0, 122.552)
 
 [node name="Tiles_map2" parent="Ground" instance=ExtResource("1_ij6nm")]
 
@@ -16,3 +25,32 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 301, 122, 153)
 [node name="Trees" type="Node3D" parent="."]
 
 [node name="Objects" type="Node3D" parent="."]
+
+[node name="Leaderboar_layout" type="Node3D" parent="."]
+transform = Transform3D(0.0913965, 0, -0.995815, 0, 1, 0, 0.995815, 0, 0.0913965, -542.183, -1.36941, -226.664)
+
+[node name="scoreboard_layout" type="Node3D" parent="Leaderboar_layout"]
+transform = Transform3D(0.0297362, 0, 0.999558, 0, 1, 0, -0.999558, 0, 0.0297362, -153.467, 0, 4.92047)
+
+[node name="Scoreboard" parent="Leaderboar_layout/scoreboard_layout" instance=ExtResource("3_pyacg")]
+transform = Transform3D(0.608817, 0, 0.793311, 0, 1, 0, -0.793311, 0, 0.608817, 199.28, 278.71, 117.624)
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="Leaderboar_layout/scoreboard_layout"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 204.813, 252.856, 128.459)
+radius = 150.0
+height = 1.0
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="Leaderboar_layout/scoreboard_layout"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 194.251, 257.576, 121.834)
+radius = 80.0
+height = 1.0
+smooth_faces = false
+material = SubResource("StandardMaterial3D_2yo1h")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Leaderboar_layout/scoreboard_layout"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 107)
+size = Vector3(20, 1, 80)
+material = SubResource("StandardMaterial3D_0x7y3")
+
+[node name="map1_leaderrboard" parent="Leaderboar_layout" instance=ExtResource("4_a1rt1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.0382, -152.114, -212.381)

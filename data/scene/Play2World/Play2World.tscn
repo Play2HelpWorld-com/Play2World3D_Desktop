@@ -86,11 +86,14 @@ transform = Transform3D(0.974264, 0, 0.22541, 0, 1, 0, -0.22541, 0, 0.974264, 29
 [node name="village_tiles5" parent="Bridges" instance=ExtResource("13_xh0pv")]
 transform = Transform3D(0.625311, 0, -0.780376, 0, 1, 0, 0.780376, 0, 0.625311, 236.621, -52.6227, -344.826)
 
+[node name="village_tiles6" parent="Bridges" instance=ExtResource("13_xh0pv")]
+transform = Transform3D(1.52815, 0, -0.951189, 0, 1.8, 0, 0.951189, 0, 1.52815, -273.799, -57.6483, -758.779)
+
 [node name="Map6" parent="." instance=ExtResource("14_jjr7w")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1480.61, -192.122, -1282.96)
+transform = Transform3D(0.977316, 0, -0.211785, 0, 1, 0, 0.211785, 0, 0.977316, -625.485, -272.035, -1033.72)
 
 [node name="Map7" parent="." instance=ExtResource("15_yrqby")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -909.187, -200.461, -2105.52)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -461.033, -200.461, -3183.96)
 
 [node name="Map8" parent="." instance=ExtResource("16_rciwc")]
 transform = Transform3D(-0.82081, 0, 0.571201, 0, 1, 0, -0.571201, 0, -0.82081, 339.8, -201.019, 857.599)
