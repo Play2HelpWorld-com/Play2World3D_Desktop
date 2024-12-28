@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dvv4pbnyftgl8"]
+[gd_scene load_steps=21 format=3 uid="uid://dvv4pbnyftgl8"]
 
 [ext_resource type="Script" path="res://src/Map.gd" id="1_pco4e"]
 [ext_resource type="Script" path="res://src/Teams.gd" id="2_5qeng"]
@@ -13,6 +13,10 @@
 [ext_resource type="PackedScene" uid="uid://bb785kyru02i" path="res://data/scene/Play2World/maps/map4/map_4.tscn" id="12_6u8j7"]
 [ext_resource type="PackedScene" uid="uid://bwcarqagxhrlj" path="res://data/scene/Play2World/maps/map5/map_5.tscn" id="13_tterk"]
 [ext_resource type="PackedScene" uid="uid://uan7xu6y7rg7" path="res://data/scene/Play2World/maps/center_map/Tiles_bridge.tscn" id="13_xh0pv"]
+[ext_resource type="PackedScene" uid="uid://d0kbidr4cxh2d" path="res://data/scene/Play2World/maps/map6/map_6.tscn" id="14_jjr7w"]
+[ext_resource type="PackedScene" uid="uid://bwulgp58jx23l" path="res://data/scene/Play2World/maps/map7/map_7.tscn" id="15_yrqby"]
+[ext_resource type="PackedScene" uid="uid://blijdiph056y1" path="res://data/scene/Play2World/maps/map8/map_8.tscn" id="16_rciwc"]
+[ext_resource type="PackedScene" uid="uid://bfqpdxa811h2a" path="res://data/scene/Play2World/maps/map9/map_9.tscn" id="17_lgn1f"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_20qs4"]
 sky_top_color = Color(0.685566, 0.615091, 0.735107, 1)
@@ -81,3 +85,15 @@ transform = Transform3D(0.974264, 0, 0.22541, 0, 1, 0, -0.22541, 0, 0.974264, 29
 
 [node name="village_tiles5" parent="Bridges" instance=ExtResource("13_xh0pv")]
 transform = Transform3D(0.625311, 0, -0.780376, 0, 1, 0, 0.780376, 0, 0.625311, 236.621, -52.6227, -344.826)
+
+[node name="Map6" parent="." instance=ExtResource("14_jjr7w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1480.61, -192.122, -1282.96)
+
+[node name="Map7" parent="." instance=ExtResource("15_yrqby")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -909.187, -200.461, -2105.52)
+
+[node name="Map8" parent="." instance=ExtResource("16_rciwc")]
+transform = Transform3D(-0.82081, 0, 0.571201, 0, 1, 0, -0.571201, 0, -0.82081, 339.8, -201.019, 857.599)
+
+[node name="Map9" parent="." instance=ExtResource("17_lgn1f")]
+transform = Transform3D(-0.947255, 0, 0.320481, 0, 1, 0, -0.320481, 0, -0.947255, -429.712, -244.906, 599.815)

@@ -26,7 +26,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 [node name="Ground" type="Node3D" parent="."]
 
 [node name="CenterLayout" type="Node3D" parent="Ground"]
-transform = Transform3D(0.0484138, 0, 0.998828, 0, 1, 0, -0.998828, 0, 0.0484138, 235.895, 0, -212.376)
+transform = Transform3D(0.0484138, 0, 0.998828, 0, 1, 0, -0.998828, 0, 0.0484138, 651.364, 0, -275.839)
 
 [node name="CenterCircle" type="CSGCylinder3D" parent="Ground/CenterLayout"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 184.399, 0.6, -227.954)
@@ -96,7 +96,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -142.764, -403.344, -26.0676)
 transform = Transform3D(0.987963, 0, 0.154693, 0, 1, 0, -0.154693, 0, 0.987963, -148.563, -153.386, -853.034)
 
 [node name="Tiles" parent="Ground" instance=ExtResource("1_ks6er")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.5987, -634.759, -415.139)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 456.068, -634.759, -478.602)
 
 [node name="Trees" type="Node3D" parent="."]
 
