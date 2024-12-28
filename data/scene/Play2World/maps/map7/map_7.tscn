@@ -12,6 +12,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 
 [node name="Tiles_map3" parent="Ground" instance=ExtResource("2_ljicj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 87, 265)
+visible = false
 
 [node name="Trees" type="Node3D" parent="."]
 

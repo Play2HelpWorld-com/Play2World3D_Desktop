@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://b1lliatyo3jtu"]
+[gd_scene load_steps=15 format=3 uid="uid://b1lliatyo3jtu"]
 
 [ext_resource type="PackedScene" uid="uid://oej335ccx6ta" path="res://data/scene/Play2World/maps/map1/Tiles_map1.tscn" id="1_ks6er"]
 [ext_resource type="PackedScene" uid="uid://b7thekyah17uv" path="res://data/scene/Play2World/screens/Screen1.tscn" id="5_weqsi"]
@@ -17,16 +17,13 @@
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p76du"]
 albedo_color = Color(0.173606, 0.295257, 0.414138, 1)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_16a80"]
-albedo_color = Color(0.639486, 0.712092, 1, 1)
-
 [node name="Map1" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 
 [node name="Ground" type="Node3D" parent="."]
 
 [node name="CenterLayout" type="Node3D" parent="Ground"]
-transform = Transform3D(0.0484138, 0, 0.998828, 0, 1, 0, -0.998828, 0, 0.0484138, 651.364, 0, -275.839)
+transform = Transform3D(-0.980976, 0, -0.194132, 0, 1, 0, 0.194132, 0, -0.980976, 700.201, -8.93221, -1326.64)
 
 [node name="CenterCircle" type="CSGCylinder3D" parent="Ground/CenterLayout"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 184.399, 0.6, -227.954)
@@ -65,10 +62,10 @@ transform = Transform3D(0.829818, 0, -0.558035, 0, 1, 0, 0.558035, 0, 0.829818, 
 transform = Transform3D(-0.0758141, 0, -0.997122, 0, 1, 0, 0.997122, 0, -0.0758141, 470.243, 0, -211.694)
 
 [node name="Leaderboar_layout" type="Node3D" parent="Ground"]
-transform = Transform3D(-0.830985, 0, -0.556295, 0, 1, 0, 0.556295, 0, -0.830985, -46.6278, -1.36941, -831.159)
+transform = Transform3D(0.614574, 0, -0.788859, 0, 1, 0, 0.788859, 0, 0.614574, 200.899, -8.43888, -797.423)
 
 [node name="scoreboard_layout" type="Node3D" parent="Ground/Leaderboar_layout"]
-transform = Transform3D(0.0297362, 0, 0.999558, 0, 1, 0, -0.999558, 0, 0.0297362, -153.467, 0, 4.92047)
+transform = Transform3D(0.117538, 0, 0.993069, 0, 1, 0, -0.993069, 0, 0.117538, -154.162, 0, 5.89728)
 
 [node name="Scoreboard" parent="Ground/Leaderboar_layout/scoreboard_layout" instance=ExtResource("15_7asho")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.49048, 1, -77.201)
@@ -84,19 +81,15 @@ height = 1.0
 smooth_faces = false
 material = SubResource("StandardMaterial3D_p76du")
 
-[node name="CSGBox3D" type="CSGBox3D" parent="Ground/Leaderboar_layout/scoreboard_layout"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 107)
-size = Vector3(20, 1, 80)
-material = SubResource("StandardMaterial3D_16a80")
-
 [node name="map1_leaderrboard" parent="Ground/Leaderboar_layout" instance=ExtResource("11_os5vw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -142.764, -403.344, -26.0676)
+transform = Transform3D(0.999155, 0, -0.041091, 0, 1, 0, 0.041091, 0, 0.999155, -150.493, -249.744, 7.96692)
 
 [node name="small_tiles" parent="Ground" instance=ExtResource("16_lm7o2")]
-transform = Transform3D(0.987963, 0, 0.154693, 0, 1, 0, -0.154693, 0, 0.987963, -148.563, -153.386, -853.034)
+transform = Transform3D(0.811717, 0, 0.584051, 0, 1, 0, -0.584051, 0, 0.811717, -148.563, -153.386, -853.034)
+visible = false
 
 [node name="Tiles" parent="Ground" instance=ExtResource("1_ks6er")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 456.068, -634.759, -478.602)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 598.941, -634.759, -1140.53)
 
 [node name="Trees" type="Node3D" parent="."]
 

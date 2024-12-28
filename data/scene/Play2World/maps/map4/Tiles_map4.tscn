@@ -43,7 +43,7 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_hkbff")
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_pra3k"]
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_8etbw"]
 points = PackedVector3Array(-0.10366, 0.374951, -0.391062, -0.0763287, 0.5, -0.350026, 0.103585, 0.374951, -0.391062, -0.0763287, 0, -0.350026, -0.306924, 0.374951, -0.306924, -0.269869, 0.5, -0.269869, 0.0761765, 0.5, -0.350026, 0.0761765, 0, -0.350026, 0.306848, 0.374951, -0.306924, -0.269869, 0, -0.269869, -0.350026, 0, -0.0763287, -0.391062, 0.374951, -0.10366, -0.350026, 0.5, -0.0763287, 0.269794, 0.5, -0.269869, 0.269794, 0, -0.269869, 0.391063, 0.374951, -0.10366, -0.350026, 0, 0.0761765, -0.391062, 0.374951, 0.103585, -0.350026, 0.5, 0.0761765, 0.349951, 0.5, -0.0763287, 0.349951, 0, -0.0763287, 0.391063, 0.374951, 0.103585, -0.306924, 0.374951, 0.306848, -0.269869, 0, 0.269794, -0.269869, 0.5, 0.269794, 0.349951, 0.5, 0.0761765, 0.349951, 0, 0.0761765, 0.269794, 0.5, 0.269794, 0.306848, 0.374951, 0.306848, 0.269794, 0, 0.269794, -0.10366, 0.374951, 0.391063, -0.0763287, 0, 0.349951, -0.0763287, 0.5, 0.349951, 0.0761765, 0.5, 0.349951, 0.103585, 0.374951, 0.391063, 0.0761765, 0, 0.349951)
 
 [node name="Tiles_map2" type="StaticBody3D"]
@@ -51,10 +51,10 @@ script = ExtResource("1_75ib7")
 tbw_object_type = "obj_picnic_table"
 
 [node name="block-snow-low-narrow" type="MeshInstance3D" parent="."]
-transform = Transform3D(600, 0, 0, 0, 600, 0, 0, 0, 600, 0, 0, 0)
+transform = Transform3D(1000, 0, 0, 0, 1000, 0, 0, 0, 1000, 0, 0, 0)
 mesh = SubResource("ArrayMesh_3md24")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(600, 0, 0, 0, 600, 0, 0, 0, 600, 0, 0, 0)
-shape = SubResource("ConvexPolygonShape3D_pra3k")
+transform = Transform3D(1000, 0, 0, 0, 1000, 0, 0, 0, 1000, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_8etbw")
