@@ -1,6 +1,5 @@
 extends Node3D
 
-@onready var avatar_node: Array = [ $api_json/Avatar1, etc]
 # Arrays for labels
 @onready var name_labels: Array = [
 	$api_json/Name1, $api_json/Name2, $api_json/Name3, $api_json/Name4, $api_json/Name5, 
@@ -30,8 +29,16 @@ extends Node3D
 # Timer for polling API data
 var polling_interval: float = 5.0  # Time in seconds
 var polling_timer: Timer
+var http_request: HTTPRequest
 
 func _ready() -> void:
+	# Initialize the HTTPRequest node once
+	http_request = HTTPRequest.new()
+	add_child(http_request)
+	
+	# Connect the request_completed signal
+	http_request.request_completed.connect(_on_request_completed)
+
 	# Create a Timer for periodic API calls
 	polling_timer = Timer.new()
 	polling_timer.wait_time = polling_interval
@@ -41,31 +48,34 @@ func _ready() -> void:
 	polling_timer.timeout.connect(fetch_member_data)
 
 	# Fetch data immediately on start
+	print("Fetching member data immediately...")
 	fetch_member_data()
 
 func fetch_member_data() -> void:
-	# Create and set up an HTTPRequest node
-	var http_request: HTTPRequest = HTTPRequest.new()
-	add_child(http_request)
-
-	# Connect the request_completed signal
-	http_request.request_completed.connect(_on_request_completed)
+	# Stop the timer while the request is being made
+	polling_timer.stop()
 
 	# Define the API URL
 	var url: String = "https://play2helpbackend.onrender.com/api/games/getMemberData/"
 	
 	# Make the request
+	print("Making HTTP request to:", url)
 	var result: int = http_request.request(url)
 
 	if result != OK:
 		print("Failed to make HTTP request. Error code:", result)
+	else:
+		print("HTTP request sent successfully, waiting for response...")
 
 func _on_request_completed(
 	result: int, response_code: int, headers: Array, body: PackedByteArray
 ) -> void:
+	print("Request completed with response code:", response_code)
+
 	if response_code == 200:
-		# Decode the JSON response
 		var json: String = body.get_string_from_utf8()
+		print("Response JSON:", json)
+
 		var json_parser: JSON = JSON.new()
 		var parse_result: int = json_parser.parse(json)
 
@@ -73,29 +83,57 @@ func _on_request_completed(
 			print("Failed to parse JSON:", json_parser.get_error_message())
 			return
 
-		# Access the JSON data
 		var response_data: Dictionary = json_parser.data
-		var member_data: Array = response_data.get("member_data", [])
+		print("Parsed Data:", response_data)
+
+		# Fetching the 'member' array
+		var member_data: Array = response_data.get("member", [])
 		update_member_data(member_data)
 	else:
 		print("HTTP Request failed with code:", response_code)
 
+	# Restart the polling timer
+	polling_timer.start()
+
+
 func update_member_data(member_data: Array) -> void:
-	# Update each label dynamically based on the data
+	if member_data.size() == 0:
+		print("No member data available.")
+		return
+
 	for i in range(name_labels.size()):
 		if i < member_data.size():
 			var data: Dictionary = member_data[i]
-			name_labels[i].text = data.get("name", "Unknown Name")
-			role_labels[i].text = data.get("role", "Unknown Role")
-			joindate_labels[i].text = data.get("join_date", "Unknown Date")
-			brands_labels[i].text = data.get("brands", "No Brands")
-			earned_tokens_labels[i].text = str(data.get("earned_tokens", "0.0"))
-			earned_dollars_labels[i].text = str(data.get("earned_dollars", "0.0"))
+
+			# Safely retrieve data with fallback
+			var name: String = str(data.get("name", "Unknown Name"))
+			var role: String = str(data.get("role", "Unknown Role"))
+			var join_date: String = str(data.get("joined_date", "Unknown Date"))
+			var earned_tokens: String = str(data.get("earned_tokens", 0.0))
+			var earned_dollars: String = str(data.get("earned_dollars", 0.0))
+			var brands: String = str(data.get("brands", []))  # Ensure this is a string
+
+			# Debugging print statements
+			print("Member Name: ", name)
+			print("Member Role: ", role)
+			print("Earned Tokens: ", earned_tokens)
+			print("Earned Dollars: ", earned_dollars)
+
+			# Update the labels
+			name_labels[i].text = name
+			role_labels[i].text = role
+			joindate_labels[i].text = join_date
+			earned_tokens_labels[i].text = earned_tokens
+			earned_dollars_labels[i].text = earned_dollars
+			brands_labels[i].text = brands
+
 		else:
-			# If no data available, set placeholders
+			# Fallback for when there is no data for a label
 			name_labels[i].text = "Processing..."
 			role_labels[i].text = "Processing..."
 			joindate_labels[i].text = "Processing..."
-			brands_labels[i].text = "Processing..."
 			earned_tokens_labels[i].text = "Processing..."
 			earned_dollars_labels[i].text = "Processing..."
+			brands_labels[i].text = "Processing..."
+
+	print("Updated member data displayed.")
