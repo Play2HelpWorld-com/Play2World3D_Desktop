@@ -1,0 +1,51 @@
+[gd_scene load_steps=3 format=3 uid="uid://bfh7n411l3uwn"]
+
+[ext_resource type="Script" path="res://src/TBWObject.gd" id="1_51byp"]
+[ext_resource type="PackedScene" uid="uid://cyb151evaq3ad" path="res://data/scene/Play2World/maps/center_map/screen_template.tscn" id="3_1k518"]
+
+[node name="CumulativeStatusBoard" type="StaticBody3D"]
+script = ExtResource("1_51byp")
+
+[node name="central_screens" type="Node3D" parent="."]
+
+[node name="Screen_template" parent="central_screens" instance=ExtResource("3_1k518")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
+
+[node name="Screen_template2" parent="central_screens" instance=ExtResource("3_1k518")]
+transform = Transform3D(-0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, -0.5, -0.99, 4, 0.5)
+
+[node name="Screen_template3" parent="central_screens" instance=ExtResource("3_1k518")]
+transform = Transform3D(-0.5, 0, -0.866025, 0, 1, 0, 0.866025, 0, -0.5, 0.166, 4, 1)
+
+[node name="base" type="CSGCombiner3D" parent="central_screens"]
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="central_screens/base"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+radius = 30.0
+sides = 16
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="central_screens/base"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+radius = 40.0
+height = 1.0
+sides = 16
+
+[node name="CSGTorus3D" type="CSGTorus3D" parent="central_screens/base"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
+inner_radius = 24.0
+outer_radius = 18.0
+sides = 15
+
+[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="central_screens/base"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
+radius = 5.0
+height = 10.0
+
+[node name="CSGCylinder3D4" type="CSGCylinder3D" parent="central_screens/base"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 26.5, 0)
+radius = 15.0
+height = 34.0
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="central_screens/base"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 62, 0)
+radius = 20.0

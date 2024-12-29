@@ -1,0 +1,201 @@
+[gd_scene load_steps=2 format=3 uid="uid://cyb151evaq3ad"]
+
+[ext_resource type="Script" path="res://src/CumulativeStatusBoard.gd" id="1_vrnav"]
+
+[node name="Screen_template" type="Node3D"]
+script = ExtResource("1_vrnav")
+
+[node name="screen1" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 22, 15)
+size = Vector3(50, 35, 1)
+
+[node name="api_json" type="Node3D" parent="."]
+
+[node name="Avatar1" type="Sprite3D" parent="api_json"]
+
+[node name="User1" type="Label3D" parent="api_json"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -17, 35, 16)
+text = "User1"
+
+[node name="Total_score1" type="Label3D" parent="api_json"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -5, 35, 16)
+text = "Total_score1"
+
+[node name="Total_tokens1" type="Label3D" parent="api_json"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 5, 35, 16)
+text = "Total_tokens1"
+
+[node name="Claimed_tokens1" type="Label3D" parent="api_json"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 15, 35, 16)
+text = "Claimed_tokens1"
+
+[node name="Avatar2" type="Sprite3D" parent="api_json"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 32, 0)
+
+[node name="User2" type="Label3D" parent="api_json"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -17, 32, 16)
+text = "User1"
+
+[node name="Total_score2" type="Label3D" parent="api_json"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -5, 32, 16)
+text = "Total_score1"
+
+[node name="Total_tokens2" type="Label3D" parent="api_json"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 5, 32, 16)
+text = "Total_tokens1"
+
+[node name="Claimed_tokens2" type="Label3D" parent="api_json"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 15, 32, 16)
+text = "Claimed_tokens1"
+
+[node name="Avatar3" type="Sprite3D" parent="api_json"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 29, 0)
+
+[node name="User3" type="Label3D" parent="api_json"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -17, 29, 16)
+text = "User1"
+
+[node name="Total_score3" type="Label3D" parent="api_json"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -5, 29, 16)
+text = "Total_score1"
+
+[node name="Total_tokens3" type="Label3D" parent="api_json"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 5, 29, 16)
+text = "Total_tokens1"
+
+[node name="Claimed_tokens3" type="Label3D" parent="api_json"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 15, 29, 16)
+text = "Claimed_tokens1"
+
+[node name="Avatar4" type="Sprite3D" parent="api_json"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 26, 0)
+
+[node name="User4" type="Label3D" parent="api_json"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -17, 26, 16)
+text = "User1"
+
+[node name="Total_score4" type="Label3D" parent="api_json"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -5, 26, 16)
+text = "Total_score1"
+
+[node name="Total_tokens4" type="Label3D" parent="api_json"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 5, 26, 16)
+text = "Total_tokens1"
+
+[node name="Claimed_tokens4" type="Label3D" parent="api_json"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 15, 26, 16)
+text = "Claimed_tokens1"
+
+[node name="Avatar5" type="Sprite3D" parent="api_json"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 23, 0)
+
+[node name="User5" type="Label3D" parent="api_json"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -17, 23, 16)
+text = "User1"
+
+[node name="Total_score5" type="Label3D" parent="api_json"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -5, 23, 16)
+text = "Total_score1"
+
+[node name="Total_tokens5" type="Label3D" parent="api_json"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 5, 23, 16)
+text = "Total_tokens1"
+
+[node name="Claimed_tokens5" type="Label3D" parent="api_json"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 15, 23, 16)
+text = "Claimed_tokens1"
+
+[node name="Avatar6" type="Sprite3D" parent="api_json"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20, 0)
+
+[node name="User6" type="Label3D" parent="api_json"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -17, 20, 16)
+text = "User1"
+
+[node name="Total_score6" type="Label3D" parent="api_json"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -5, 20, 16)
+text = "Total_score1"
+
+[node name="Total_tokens6" type="Label3D" parent="api_json"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 5, 20, 16)
+text = "Total_tokens1"
+
+[node name="Claimed_tokens6" type="Label3D" parent="api_json"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 15, 20, 16)
+text = "Claimed_tokens1"
+
+[node name="Avatar7" type="Sprite3D" parent="api_json"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 17, 0)
+
+[node name="User7" type="Label3D" parent="api_json"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -17, 17, 16)
+text = "User1"
+
+[node name="Total_score7" type="Label3D" parent="api_json"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -5, 17, 16)
+text = "Total_score1"
+
+[node name="Total_tokens7" type="Label3D" parent="api_json"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 5, 17, 16)
+text = "Total_tokens1"
+
+[node name="Claimed_tokens7" type="Label3D" parent="api_json"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 15, 17, 16)
+text = "Claimed_tokens1"
+
+[node name="Avatar8" type="Sprite3D" parent="api_json"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 14, 0)
+
+[node name="User8" type="Label3D" parent="api_json"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -17, 14, 16)
+text = "User1"
+
+[node name="Total_score8" type="Label3D" parent="api_json"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -5, 14, 16)
+text = "Total_score1"
+
+[node name="Total_tokens8" type="Label3D" parent="api_json"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 5, 14, 16)
+text = "Total_tokens1"
+
+[node name="Claimed_tokens8" type="Label3D" parent="api_json"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 15, 14, 16)
+text = "Claimed_tokens1"
+
+[node name="Avatar9" type="Sprite3D" parent="api_json"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11, 0)
+
+[node name="User9" type="Label3D" parent="api_json"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -17, 11, 16)
+text = "User1"
+
+[node name="Total_score9" type="Label3D" parent="api_json"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -5, 11, 16)
+text = "Total_score1"
+
+[node name="Total_tokens9" type="Label3D" parent="api_json"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 5, 11, 16)
+text = "Total_tokens1"
+
+[node name="Claimed_tokens9" type="Label3D" parent="api_json"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 15, 11, 16)
+text = "Claimed_tokens1"
+
+[node name="Avatar10" type="Sprite3D" parent="api_json"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8, 0)
+
+[node name="User10" type="Label3D" parent="api_json"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -17, 8, 16)
+text = "User1"
+
+[node name="Total_score10" type="Label3D" parent="api_json"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -5, 8, 16)
+text = "Total_score1"
+
+[node name="Total_tokens10" type="Label3D" parent="api_json"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 5, 8, 16)
+text = "Total_tokens1"
+
+[node name="Claimed_tokens10" type="Label3D" parent="api_json"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 15, 8, 16)
+text = "Claimed_tokens1"
