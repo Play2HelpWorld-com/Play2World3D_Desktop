@@ -1,13 +1,12 @@
-[gd_scene load_steps=12 format=3 uid="uid://02fgwua5sk3u"]
+[gd_scene load_steps=11 format=3 uid="uid://02fgwua5sk3u"]
 
 [ext_resource type="Script" path="res://src/Map.gd" id="1_42h5e"]
-[ext_resource type="PackedScene" uid="uid://dvv4pbnyftgl8" path="res://data/scene/WorldOfWorlds/RobotWorld.tscn" id="1_lm04v"]
 [ext_resource type="Script" path="res://src/Teams.gd" id="3_rttfh"]
 [ext_resource type="Resource" uid="uid://qabpabfggsdp" path="res://data/team.tres" id="4_7rc8g"]
 [ext_resource type="Resource" uid="uid://cimhewj2wn54n" path="res://data/green_team.tres" id="5_nphkk"]
 [ext_resource type="Resource" uid="uid://r855pcta01ie" path="res://data/purple_team.tres" id="6_khoxl"]
 [ext_resource type="PackedScene" uid="uid://bga4pdoo5a2mi" path="res://data/scene/Play2World/SurfaceWater.tscn" id="7_ugjrf"]
-[ext_resource type="PackedScene" uid="uid://dvv4pbnyftgl8" path="res://data/scene/WorldOfWorlds/MemeWorld.tscn" id="8_lhdov"]
+[ext_resource type="PackedScene" uid="uid://dvv4pbnyftgl8" path="res://data/scene/WorldOfWorlds/RobotWorld.tscn" id="8_lhdov"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_yeewp"]
 sky_top_color = Color(0.685566, 0.615091, 0.735107, 1)
@@ -41,9 +40,9 @@ team_list = Array[Resource]([ExtResource("4_7rc8g"), ExtResource("5_nphkk"), Ext
 [node name="Water" parent="." instance=ExtResource("7_ugjrf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -165.864, -10)
 
-[node name="Play2World" parent="." instance=ExtResource("1_lm04v")]
+[node name="Play2World" parent="." instance=ExtResource("8_lhdov")]
 
-[node name="RobotWorld" parent="." instance=ExtResource("1_lm04v")]
+[node name="RobotWorld" parent="." instance=ExtResource("8_lhdov")]
 transform = Transform3D(-0.817607, 0, -0.575776, 0, 1, 0, 0.575776, 0, -0.817607, 1530.87, 50, 1745.58)
 
 [node name="MemeWorld" parent="." instance=ExtResource("8_lhdov")]
