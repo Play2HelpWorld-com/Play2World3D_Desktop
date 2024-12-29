@@ -1,22 +1,36 @@
-[gd_scene load_steps=2 format=3 uid="uid://c8nf8hl5kk6m2"]
+[gd_scene load_steps=4 format=3 uid="uid://c8nf8hl5kk6m2"]
 
 [ext_resource type="Script" path="res://src/CentralMembers.gd" id="1_e23wb"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jqi7k"]
+albedo_color = Color(2.28621e-07, 0.214879, 0.217034, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8egis"]
+albedo_color = Color(0.325441, 0.325441, 0.325441, 1)
 
 [node name="central_members" type="Node3D"]
 script = ExtResource("1_e23wb")
 
 [node name="screen" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 12, 0)
+material_override = SubResource("StandardMaterial3D_jqi7k")
 size = Vector3(32, 22, 2)
 
 [node name="base" type="CSGCylinder3D" parent="."]
+material_override = SubResource("StandardMaterial3D_8egis")
 radius = 5.0
 
+[node name="Title" type="Label3D" parent="."]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -0.5, 22, 1.1)
+modulate = Color(0.835294, 0.631373, 0, 1)
+text = "Members List"
+
 [node name="api_json" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 2, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1.5, 0)
 
 [node name="Name1" type="Label3D" parent="api_json"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -6.5, 19, 1.1)
+modulate = Color(1, 0.658824, 0.564706, 1)
 text = "Name"
 
 [node name="Role1" type="Label3D" parent="api_json"]
@@ -33,14 +47,17 @@ text = "Brands"
 
 [node name="EarnedTokens1" type="Label3D" parent="api_json"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 13, 19, 1.1)
+modulate = Color(1, 0.839216, 1, 1)
 text = "token"
 
 [node name="EarnedDollars1" type="Label3D" parent="api_json"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 18, 19, 1.1)
+modulate = Color(0.565127, 0.997888, 1, 1)
 text = "dollar"
 
 [node name="Name2" type="Label3D" parent="api_json"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -6.5, 17, 1.1)
+modulate = Color(1, 0.658824, 0.564706, 1)
 text = "Name"
 
 [node name="Role2" type="Label3D" parent="api_json"]
@@ -57,14 +74,17 @@ text = "Brands"
 
 [node name="EarnedTokens2" type="Label3D" parent="api_json"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 13, 17, 1.1)
+modulate = Color(1, 0.839216, 1, 1)
 text = "token"
 
 [node name="EarnedDollars2" type="Label3D" parent="api_json"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 18, 17, 1.1)
+modulate = Color(0.565127, 0.997888, 1, 1)
 text = "dollar"
 
 [node name="Name3" type="Label3D" parent="api_json"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -6.5, 15, 1.1)
+modulate = Color(1, 0.658824, 0.564706, 1)
 text = "Name"
 
 [node name="Role3" type="Label3D" parent="api_json"]
@@ -81,14 +101,17 @@ text = "Brands"
 
 [node name="EarnedTokens3" type="Label3D" parent="api_json"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 13, 15, 1.1)
+modulate = Color(1, 0.839216, 1, 1)
 text = "token"
 
 [node name="EarnedDollars3" type="Label3D" parent="api_json"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 18, 15, 1.1)
+modulate = Color(0.565127, 0.997888, 1, 1)
 text = "dollar"
 
 [node name="Name4" type="Label3D" parent="api_json"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -6.5, 13, 1.1)
+modulate = Color(1, 0.658824, 0.564706, 1)
 text = "Name"
 
 [node name="Role4" type="Label3D" parent="api_json"]
@@ -105,14 +128,17 @@ text = "Brands"
 
 [node name="EarnedTokens4" type="Label3D" parent="api_json"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 13, 13, 1.1)
+modulate = Color(1, 0.839216, 1, 1)
 text = "token"
 
 [node name="EarnedDollars4" type="Label3D" parent="api_json"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 18, 13, 1.1)
+modulate = Color(0.565127, 0.997888, 1, 1)
 text = "dollar"
 
 [node name="Name5" type="Label3D" parent="api_json"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -6.5, 11, 1.1)
+modulate = Color(1, 0.658824, 0.564706, 1)
 text = "Name"
 
 [node name="Role5" type="Label3D" parent="api_json"]
@@ -129,14 +155,17 @@ text = "Brands"
 
 [node name="EarnedTokens5" type="Label3D" parent="api_json"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 13, 11, 1.1)
+modulate = Color(1, 0.839216, 1, 1)
 text = "token"
 
 [node name="EarnedDollars5" type="Label3D" parent="api_json"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 18, 11, 1.1)
+modulate = Color(0.565127, 0.997888, 1, 1)
 text = "dollar"
 
 [node name="Name6" type="Label3D" parent="api_json"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -6.5, 9, 1.1)
+modulate = Color(1, 0.658824, 0.564706, 1)
 text = "Name"
 
 [node name="Role6" type="Label3D" parent="api_json"]
@@ -153,14 +182,17 @@ text = "Brands"
 
 [node name="EarnedTokens6" type="Label3D" parent="api_json"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 13, 9, 1.1)
+modulate = Color(1, 0.839216, 1, 1)
 text = "token"
 
 [node name="EarnedDollars6" type="Label3D" parent="api_json"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 18, 9, 1.1)
+modulate = Color(0.565127, 0.997888, 1, 1)
 text = "dollar"
 
 [node name="Name7" type="Label3D" parent="api_json"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -6.5, 7, 1.1)
+modulate = Color(1, 0.658824, 0.564706, 1)
 text = "Name"
 
 [node name="Role7" type="Label3D" parent="api_json"]
@@ -177,14 +209,17 @@ text = "Brands"
 
 [node name="EarnedTokens7" type="Label3D" parent="api_json"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 13, 7, 1.1)
+modulate = Color(1, 0.839216, 1, 1)
 text = "token"
 
 [node name="EarnedDollars7" type="Label3D" parent="api_json"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 18, 7, 1.1)
+modulate = Color(0.565127, 0.997888, 1, 1)
 text = "dollar"
 
 [node name="Name8" type="Label3D" parent="api_json"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -6.5, 5, 1.1)
+modulate = Color(1, 0.658824, 0.564706, 1)
 text = "Name"
 
 [node name="Role8" type="Label3D" parent="api_json"]
@@ -201,14 +236,17 @@ text = "Brands"
 
 [node name="EarnedTokens8" type="Label3D" parent="api_json"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 13, 5, 1.1)
+modulate = Color(1, 0.839216, 1, 1)
 text = "token"
 
 [node name="EarnedDollars8" type="Label3D" parent="api_json"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 18, 5, 1.1)
+modulate = Color(0.565127, 0.997888, 1, 1)
 text = "dollar"
 
 [node name="Name9" type="Label3D" parent="api_json"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -6.5, 3, 1.1)
+modulate = Color(1, 0.658824, 0.564706, 1)
 text = "Name"
 
 [node name="Role9" type="Label3D" parent="api_json"]
@@ -225,14 +263,17 @@ text = "Brands"
 
 [node name="EarnedTokens9" type="Label3D" parent="api_json"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 13, 3, 1.1)
+modulate = Color(1, 0.839216, 1, 1)
 text = "token"
 
 [node name="EarnedDollars9" type="Label3D" parent="api_json"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 18, 3, 1.1)
+modulate = Color(0.565127, 0.997888, 1, 1)
 text = "dollar"
 
 [node name="Name10" type="Label3D" parent="api_json"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -6.5, 1, 1.1)
+modulate = Color(1, 0.658824, 0.564706, 1)
 text = "Name"
 
 [node name="Role10" type="Label3D" parent="api_json"]
@@ -249,10 +290,12 @@ text = "Brands"
 
 [node name="EarnedTokens10" type="Label3D" parent="api_json"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 13, 1, 1.1)
+modulate = Color(1, 0.839216, 1, 1)
 text = "token"
 
 [node name="EarnedDollars10" type="Label3D" parent="api_json"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 18, 1, 1.1)
+modulate = Color(0.565127, 0.997888, 1, 1)
 text = "dollar"
 
 [node name="Avatar1" type="Sprite3D" parent="api_json"]
