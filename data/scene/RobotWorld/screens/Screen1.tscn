@@ -1,7 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://b7thekyah17uv"]
+[gd_scene load_steps=9 format=3 uid="uid://b7thekyah17uv"]
 
 [ext_resource type="Script" path="res://src/TBWObject.gd" id="1_mt0sp"]
 [ext_resource type="PackedScene" uid="uid://bun0xknbjk31g" path="res://data/scene/RobotWorld/screens/GameBoard1.tscn" id="2_d5kty"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2pb33"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ta8v7"]
 albedo_color = Color(0.957565, 0.834514, 0.892163, 1)
@@ -27,6 +29,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -9.234)
 [node name="Billboard" type="CSGBox3D" parent="Screen_Object"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 17, 0)
 size = Vector3(52, 25, 1)
+material = SubResource("StandardMaterial3D_2pb33")
 
 [node name="sidebar_left" type="CSGBox3D" parent="Screen_Object"]
 transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, -31.7329, 15.408, 4.78771)

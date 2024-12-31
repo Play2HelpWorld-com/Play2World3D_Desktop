@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://djliiil2h1gan" path="res://data/scene/RobotWorld/maps/map1/Tiles_leaderboard_map1.tscn" id="11_os5vw"]
 [ext_resource type="PackedScene" uid="uid://x4nnt2eeheth" path="res://data/scene/RobotWorld/screens/Screen8.tscn" id="12_m82b5"]
 [ext_resource type="PackedScene" uid="uid://bfuc6kooh5fmy" path="res://data/scene/RobotWorld/screens/Screen9.tscn" id="13_6ubdy"]
-[ext_resource type="PackedScene" uid="uid://ydb61ihdv0ee" path="res://data/scene/Play2World/Scoreboard.tscn" id="15_7asho"]
+[ext_resource type="PackedScene" uid="uid://ydb61ihdv0ee" path="res://data/scene/RobotWorld/Scoreboard.tscn" id="15_7asho"]
 [ext_resource type="PackedScene" uid="uid://dktumbf4pqrdw" path="res://data/scene/RobotWorld/maps/map1/small_floating_tiles.tscn" id="16_lm7o2"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p76du"]

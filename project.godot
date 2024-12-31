@@ -56,7 +56,7 @@ script/templates_search_path="res://data/script_templates"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/LANServerBroadcast/plugin.cfg", "res://addons/smoothing/plugin.cfg")
+enabled=PackedStringArray("res://addons/LANServerBroadcast/plugin.cfg", "res://addons/godotbuddy/plugin.cfg", "res://addons/smoothing/plugin.cfg")
 
 [file_customization]
 

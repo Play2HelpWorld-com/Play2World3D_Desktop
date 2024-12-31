@@ -8,10 +8,11 @@ var text_edit
 var rich_text_label
 var http_request
 var chat_history = []
-var system_prompt = "Your name is Godot Buddy, you are a master coder and game designer. You only use the Godot 4 Engine. You carefully follow all instructions you are given and avoid giving lengthy explanations of why or how something works. You always follow DRY and SOLID principles in all code you write. You always write self describing code with full names for all variables and functions. Always fully document code and functions with documentation comments using hashtags that completely explain all params and variables. You always use tabs for indentation. You always follow Godot 4 gdscript style guidelines. You always utilize getter and setter functions. You always statically type all variables and focus on maximizing performance. Instead of writing code in markdown tags you write them in bbcode [code][/code] tags. Use BBCode to make your messages look prettier."
-var api_key = ""
+var system_prompt = "Your name is Godot Buddy, you are a master coder and game designer. You only use the Godot 4 Engine. You carefully follow all instructions you are given and avoid giving lengthy explanations of why or how something works. You always follow DRY and SOLID principles in all code you write. You always write self-describing code with full names for all variables and functions. Always fully document code and functions with documentation comments using hashtags that completely explain all params and variables. You always use tabs for indentation. You always follow Godot 4 gdscript style guidelines. You always utilize getter and setter functions. You always statically type all variables and focus on maximizing performance. Instead of writing code in markdown tags you write them in bbcode [code][/code] tags. Use BBCode to make your messages look prettier."
+var api_key = "https://flowise-2-0.onrender.com/api/v1/prediction/9f1781bd-ad88-42a8-8baf-554a0e7b1ac9"
 var api_key_file = "user://api_key.txt"
 var loading_icon: TextureRect
+var session_id = ""  # Store session ID from the response
 
 func _enter_tree():
 	# Initialization of the plugin goes here.
@@ -60,17 +61,13 @@ func _on_button_pressed():
 	var api_key_input = dock.get_node("VBoxContainer/GroqAPIKey/LineEdit").text
 	api_key = api_key_input
 	save_api_key()
-	var url = "https://api.groq.com/openai/v1/chat/completions"
+	var url = "https://flowise-2-0.onrender.com/api/v1/prediction/9f1781bd-ad88-42a8-8baf-554a0e7b1ac9"
 	var headers = ["Authorization: Bearer " + api_key, "Content-Type: application/json"]
 	var body = {
-		"messages": [{"role": "system", "content": system_prompt}] + chat_history,
-		"model": "llama3-70b-8192"
+		"question": text
 	}
 	
 	# Show loading icon
-	#var loading_icon = dock.get_node("VBoxContainer/LoadingIcon")
-	#loading_icon.visible = true
-	
 	http_request.request(url, headers, HTTPClient.METHOD_POST, JSON.stringify(body))
 	text_edit.text = ""
 
@@ -79,16 +76,19 @@ func _on_request_completed(result, response_code, headers, body):
 	
 	if response_code == 200:
 		var response_str = body.get_string_from_utf8()
-		var response = JSON.parse_string(response_str)
-		if typeof(response) == TYPE_DICTIONARY and response.has("choices"):
-			var response_data = response["choices"][0]["message"]["content"]
+		var response_data = JSON.parse_string(response_str)
+		if typeof(response_data) == TYPE_DICTIONARY and response_data.has("text"):
+			var ai_response = response_data["text"]
 			
 			rich_text_label.push_color(Color.DARK_SEA_GREEN)
-			rich_text_label.append_text("\n\n---\n\n[u]AI:[/u] " + response_data)
+			rich_text_label.append_text("\n\n---\n\n[u]AI:[/u] " + ai_response)
 			rich_text_label.pop()
 			
 			# Append AI's response to chat history
-			chat_history.append({"role": "assistant", "content": response_data})
+			chat_history.append({"role": "assistant", "content": ai_response})
+			
+			# Update session ID for continuity in the chat
+			session_id = response_data["sessionId"]
 		else:
 			rich_text_label.push_color(Color.DARK_RED)
 			rich_text_label.append_text("\n\n---\n\n[u]Error:[/u] Failed to parse response.")

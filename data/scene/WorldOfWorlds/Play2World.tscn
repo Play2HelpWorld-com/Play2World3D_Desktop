@@ -15,7 +15,7 @@
 [node name="Play2World" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 50, 0)
 
-[node name="Map0" type="Node3D" parent="." instance=ExtResource("1_ffilu")]
+[node name="Map0" parent="." instance=ExtResource("1_ffilu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -20.2182, 0)
 
 [node name="Map1" parent="." instance=ExtResource("2_dbpig")]

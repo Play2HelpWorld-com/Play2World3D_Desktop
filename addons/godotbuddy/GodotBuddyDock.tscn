@@ -48,11 +48,13 @@ label_settings = SubResource("LabelSettings_drddc")
 layout_mode = 2
 
 [node name="WelcomeLabel2" type="Label" parent="VBoxContainer/WelcomeBlurb"]
+visible = false
 layout_mode = 2
 text = "Register on Groq and supply an API key to start. You can type @filename.gd to quickly import file contents. Model llama3-70b-8192 in use."
 autowrap_mode = 3
 
 [node name="Links" type="MarginContainer" parent="VBoxContainer"]
+visible = false
 layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 10
@@ -70,6 +72,7 @@ text = "https://github.com/m4yc3x"
 uri = "https://github.com/m4yc3x"
 
 [node name="GroqAPIKey" type="MarginContainer" parent="VBoxContainer"]
+visible = false
 layout_mode = 2
 theme_override_constants/margin_left = 15
 theme_override_constants/margin_top = 5
