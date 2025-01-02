@@ -1,18 +1,18 @@
-[gd_scene load_steps=29 format=3 uid="uid://dbv7xvbqvmyx0"]
+[gd_scene load_steps=30 format=3 uid="uid://dbv7xvbqvmyx0"]
 
 [ext_resource type="PackedScene" uid="uid://cekjrjqcl4bu5" path="res://data/scene/RobotWorld/maps/center_map/Tiles_map0.tscn" id="1_1ddmg"]
 [ext_resource type="PackedScene" uid="uid://c5ndqrparso5a" path="res://data/scene/RobotWorld/objects/p_2_wbillboard.tscn" id="4_qbaij"]
 [ext_resource type="MeshLibrary" uid="uid://di6l4v2cdpa3m" path="res://data/assets/meshes/nature_mesh_library.tres" id="5_6vlbj"]
 [ext_resource type="MeshLibrary" uid="uid://cjhr2b027h35f" path="res://data/assets/meshes/grass_mesh_library.tres" id="5_u17ed"]
-[ext_resource type="PackedScene" uid="uid://8ahsgap1pg4n" path="res://data/scene/Play2World/LargeBlock.tscn" id="6_r57px"]
-[ext_resource type="PackedScene" uid="uid://c1bm8ii0vjjat" path="res://data/scene/Play2World/MidBlock.tscn" id="7_dygfh"]
-[ext_resource type="PackedScene" uid="uid://4oxbsvjjnrjd" path="res://data/scene/Play2World/SlopeBlock.tscn" id="8_s55ce"]
-[ext_resource type="PackedScene" uid="uid://dqhcn4phqlqjf" path="res://data/scene/Play2World/HexagonBlock.tscn" id="9_cyaq4"]
+[ext_resource type="PackedScene" uid="uid://8ahsgap1pg4n" path="res://data/scene/RobotWorld/LargeBlock.tscn" id="6_r57px"]
+[ext_resource type="PackedScene" uid="uid://c1bm8ii0vjjat" path="res://data/scene/RobotWorld/MidBlock.tscn" id="7_dygfh"]
+[ext_resource type="PackedScene" uid="uid://4oxbsvjjnrjd" path="res://data/scene/RobotWorld/SlopeBlock.tscn" id="8_s55ce"]
+[ext_resource type="PackedScene" uid="uid://dqhcn4phqlqjf" path="res://data/scene/RobotWorld/HexagonBlock.tscn" id="9_cyaq4"]
 [ext_resource type="MeshLibrary" uid="uid://5wqib7lorv8r" path="res://data/assets/meshes/terrain_mesh_library.tres" id="10_ciuds"]
-[ext_resource type="PackedScene" uid="uid://dlhpoul7bw8pe" path="res://data/scene/Play2World/FlatSandRock.tscn" id="11_4v55h"]
-[ext_resource type="PackedScene" uid="uid://bli85viymfi46" path="res://data/scene/Play2World/PondWater.tscn" id="12_mf4gs"]
-[ext_resource type="PackedScene" uid="uid://cv357lpsarl4t" path="res://data/scene/Play2World/BridgePass.tscn" id="13_wrusw"]
-[ext_resource type="PackedScene" uid="uid://dmvynggpoqy7p" path="res://data/scene/Play2World/NarrowBlock.tscn" id="14_kqccr"]
+[ext_resource type="PackedScene" uid="uid://dlhpoul7bw8pe" path="res://data/scene/RobotWorld/FlatSandRock.tscn" id="11_4v55h"]
+[ext_resource type="PackedScene" uid="uid://bli85viymfi46" path="res://data/scene/RobotWorld/PondWater.tscn" id="12_mf4gs"]
+[ext_resource type="PackedScene" uid="uid://cv357lpsarl4t" path="res://data/scene/RobotWorld/BridgePass.tscn" id="13_wrusw"]
+[ext_resource type="PackedScene" uid="uid://dmvynggpoqy7p" path="res://data/scene/RobotWorld/NarrowBlock.tscn" id="14_kqccr"]
 [ext_resource type="PackedScene" uid="uid://dsnmabjl1xc17" path="res://data/scene/RobotWorld/maps/center_map/SmallBridgePass.tscn" id="15_18mbb"]
 [ext_resource type="PackedScene" uid="uid://diwv47nciiuh7" path="res://data/scene/RobotWorld/maps/center_map/Tiles_curver_slope.tscn" id="15_hmyh3"]
 [ext_resource type="PackedScene" uid="uid://d77wtx4ofpyc" path="res://data/scene/RobotWorld/maps/center_map/circular_village.tscn" id="15_xw5hy"]
@@ -28,6 +28,7 @@
 [ext_resource type="PackedScene" uid="uid://dk2hbbt734jk0" path="res://data/scene/RobotWorld/signboard/BoardPlay2Experiences.tscn" id="23_6wvei"]
 [ext_resource type="PackedScene" uid="uid://bjemhdkhotj32" path="res://data/scene/RobotWorld/signboard/BoardPlay2Travel.tscn" id="24_bmk8e"]
 [ext_resource type="PackedScene" uid="uid://d15xh22sdg3ck" path="res://data/scene/RobotWorld/signboard/BoardPlay2Music.tscn" id="25_h0bif"]
+[ext_resource type="PackedScene" uid="uid://d0x1ol0skgw7p" path="res://data/scene/Play2World/maps/center_map/pop_up.tscn" id="29_lwxr1"]
 
 [node name="Map0" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
@@ -287,3 +288,6 @@ transform = Transform3D(2.98023e-08, 0, 1, 0, 1, 0, -1, 0, 2.98023e-08, 17, -24,
 
 [node name="ScoreboardArea" parent="." instance=ExtResource("16_s8g6m")]
 transform = Transform3D(0.882947, 0, 0.469471, 0, 1, 0, -0.469471, 0, 0.882947, -180.487, -79, -244.82)
+
+[node name="Pop-Up" parent="." instance=ExtResource("29_lwxr1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.07468, 20.1341, -7.00114)
