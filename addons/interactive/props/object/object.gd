@@ -1,7 +1,7 @@
 extends Node3D
 
 @export var highlight_material: StandardMaterial3D
-@export var new_scene_path: String = "res://addons/godotbuddy/scene/GodotBuddyScene.tscn"
+@export var new_scene_path: String = "res://addons/interactive/props/window/window.tscn"
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var chest_meshinstance: MeshInstance3D = $Armature/Skeleton3D/top_Chest_0
@@ -35,6 +35,9 @@ func open() -> void:
 	# Load the new scene after opening
 	load_new_scene()
 
+	# Ensure chest remains interactable even after opening
+	$Interactable.is_interactable = true  # Make sure it's interactable
+
 # Close the chest and unload the new scene
 func close() -> void:
 	is_open = false
@@ -45,6 +48,9 @@ func close() -> void:
 
 	# Unload the scene after closing
 	unload_scene()
+
+	# Keep the chest interactable even when it's closed
+	$Interactable.is_interactable = true  # Ensure it's still interactable
 
 # Add highlight effect to the chest
 func add_highlight() -> void:
@@ -57,21 +63,9 @@ func remove_highlight() -> void:
 
 # Toggle the chest's state (open/close) and load/unload the scene on interaction
 func _on_interactable_interacted(_interactor: Interactor) -> void:
+	# No need to check if the chest is open or closed; simply toggle interaction
+	remove_highlight()
 	if is_open:
-		# Close chest and unload the scene if open
-		remove_highlight()
 		close()
 	else:
-		# Open chest and load the scene if closed
-		remove_highlight()
-		$Interactable.queue_free()
 		open()
-
-# Add white outline when focused
-func _on_interactable_focused(_interactor: Interactor) -> void:
-	if not is_open:
-		add_highlight()
-
-# Remove white outline when unfocused
-func _on_interactable_unfocused(_interactor: Interactor) -> void:
-	remove_highlight()
