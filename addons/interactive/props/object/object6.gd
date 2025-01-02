@@ -1,7 +1,7 @@
 extends Node3D
 
 @export var highlight_material: StandardMaterial3D
-@export var new_scene_path: String = "res://addons/interactive/props/window/window.tscn"
+@export var new_scene_path: String = "res://addons/interactive/props/window/window6.tscn"
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var chest_meshinstance: MeshInstance3D = $Armature/Skeleton3D/top_Chest_0

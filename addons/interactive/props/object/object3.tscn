@@ -1,8 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://k4kikx3kx4qn"]
+[gd_scene load_steps=6 format=3 uid="uid://cg11c3pyvlj3h"]
 
-[ext_resource type="PackedScene" uid="uid://bhlk3jlpfm1h0" path="res://addons/interactive/props/chest/source/chest.glb" id="1_w3qd4"]
-[ext_resource type="Script" path="res://addons/interactive/props/object/object.gd" id="2_kkw3q"]
-[ext_resource type="PackedScene" uid="uid://bcant1jf3ssg3" path="res://addons/interactive/interaction/Interactable.tscn" id="3_trsna"]
+[ext_resource type="PackedScene" uid="uid://bhlk3jlpfm1h0" path="res://addons/interactive/props/chest/source/chest.glb" id="1_iexuv"]
+[ext_resource type="Script" path="res://addons/interactive/props/object/object3.gd" id="2_rr2qf"]
+[ext_resource type="PackedScene" uid="uid://bcant1jf3ssg3" path="res://addons/interactive/interaction/Interactable.tscn" id="3_4b6qy"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_clxje"]
 size = Vector3(0.614, 0.518, 0.587)
@@ -10,8 +10,8 @@ size = Vector3(0.614, 0.518, 0.587)
 [sub_resource type="BoxShape3D" id="BoxShape3D_frebs"]
 size = Vector3(0.614408, 0.517854, 0.586966)
 
-[node name="object" instance=ExtResource("1_w3qd4")]
-script = ExtResource("2_kkw3q")
+[node name="object" instance=ExtResource("1_iexuv")]
+script = ExtResource("2_rr2qf")
 
 [node name="Skeleton3D" parent="Armature" index="0"]
 bones/0/rotation = Quaternion(0, 0, 0, 1)
@@ -23,7 +23,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.251476, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
 shape = SubResource("BoxShape3D_clxje")
 
-[node name="Interactable" parent="." index="3" instance=ExtResource("3_trsna")]
+[node name="Interactable" parent="." index="3" instance=ExtResource("3_4b6qy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.251476, 0)
 
 [node name="CollisionShape3D" parent="Interactable" index="0"]

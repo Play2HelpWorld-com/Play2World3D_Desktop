@@ -1,9 +1,10 @@
-[gd_scene format=3 uid="uid://cjodl8fvwtrig"]
+[gd_scene format=3 uid="uid://b7g26efc8ncx3"]
 
 [node name="Window" type="Node3D"]
 
 [node name="WebView" type="WebView" parent="."]
 full_window_size = false
+url = "https://play2helpgamesserver.onrender.com/bubbleGame/?to="
 devtools = false
 clipboard = false
 focused = false

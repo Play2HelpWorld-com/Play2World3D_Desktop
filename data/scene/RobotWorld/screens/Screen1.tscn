@@ -1,10 +1,10 @@
 [gd_scene load_steps=12 format=3 uid="uid://b7thekyah17uv"]
 
 [ext_resource type="Script" path="res://src/TBWObject.gd" id="1_mt0sp"]
-[ext_resource type="PackedScene" uid="uid://bcant1jf3ssg3" path="res://addons/interactive/interaction/Interactable.tscn" id="2_1vrcn"]
 [ext_resource type="PackedScene" uid="uid://bun0xknbjk31g" path="res://data/scene/RobotWorld/screens/GameBoard1.tscn" id="2_d5kty"]
 [ext_resource type="Script" path="res://src/ScreenInteraction.gd" id="2_yi31f"]
 [ext_resource type="PackedScene" uid="uid://bo5to3cs55ywc" path="res://addons/interactive/props/chest/chest.tscn" id="3_7u06r"]
+[ext_resource type="PackedScene" uid="uid://k4kikx3kx4qn" path="res://addons/interactive/props/object/object1.tscn" id="5_xqtmw"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2pb33"]
 
@@ -23,11 +23,11 @@ albedo_color = Color(0.867397, 0.910603, 0.991533, 1)
 [sub_resource type="BoxShape3D" id="BoxShape3D_xe7iu"]
 size = Vector3(50, 30, 1)
 
-[node name="Screen1" type="StaticBody3D"]
+[node name="screen1" type="StaticBody3D"]
 script = ExtResource("1_mt0sp")
 
 [node name="Screen_Object" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -9.234)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.494251, -9.234)
 script = ExtResource("2_yi31f")
 
 [node name="Billboard" type="CSGBox3D" parent="Screen_Object"]
@@ -54,9 +54,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 18.0825)
 radius = 40.0
 sides = 18
 material = SubResource("StandardMaterial3D_ea4ua")
-
-[node name="Interactable" parent="Screen_Object" instance=ExtResource("2_1vrcn")]
-transform = Transform3D(80, 0, 0, 0, 80, 0, 0, 0, 80, 0, 18.5445, 25.3279)
 
 [node name="Stand_group" type="Node3D" parent="Screen_Object"]
 
@@ -93,6 +90,5 @@ transform = Transform3D(0.999984, 0, -0.00565484, 0, 1, 0, 0.00565484, 0, 0.9999
 
 [node name="chest" parent="." instance=ExtResource("3_7u06r")]
 
-[connection signal="focused" from="Screen_Object/Interactable" to="Screen_Object" method="_on_interactable_focused"]
-[connection signal="interacted" from="Screen_Object/Interactable" to="Screen_Object" method="_on_interactable_interacted"]
-[connection signal="unfocused" from="Screen_Object/Interactable" to="Screen_Object" method="_on_interactable_unfocused"]
+[node name="object" parent="." instance=ExtResource("5_xqtmw")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 3.32407, 49.4829)

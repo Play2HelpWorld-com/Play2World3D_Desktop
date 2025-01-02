@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=3 uid="uid://b1lliatyo3jtu"]
 
 [ext_resource type="PackedScene" uid="uid://oej335ccx6ta" path="res://data/scene/RobotWorld/maps/map1/Tiles_map1.tscn" id="1_ks6er"]
-[ext_resource type="PackedScene" uid="uid://b7thekyah17uv" path="res://data/scene/RobotWorld/screens/Screen1.tscn" id="5_weqsi"]
+[ext_resource type="PackedScene" uid="uid://b7thekyah17uv" path="res://data/scene/MemeWorld/screens/Screen1.tscn" id="5_weqsi"]
 [ext_resource type="PackedScene" uid="uid://deogfgyy36b78" path="res://data/scene/RobotWorld/screens/Screen2.tscn" id="6_vlhbw"]
 [ext_resource type="PackedScene" uid="uid://qp0ru4vtfwr3" path="res://data/scene/RobotWorld/screens/Screen3.tscn" id="7_vrttg"]
 [ext_resource type="PackedScene" uid="uid://cx8a6a7070mt5" path="res://data/scene/RobotWorld/screens/Screen4.tscn" id="8_8tues"]
@@ -23,7 +23,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 [node name="Ground" type="Node3D" parent="."]
 
 [node name="CenterLayout" type="Node3D" parent="Ground"]
-transform = Transform3D(-0.980976, 0, -0.194132, 0, 1, 0, 0.194132, 0, -0.980976, 700.201, -8.93221, -1326.64)
+transform = Transform3D(-0.980976, 0, -0.194132, 0, 1, 0, 0.194132, 0, -0.980976, 700.201, -10.8, -1326.64)
 
 [node name="CenterCircle" type="CSGCylinder3D" parent="Ground/CenterLayout"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 184.399, 0.6, -227.954)
@@ -62,7 +62,7 @@ transform = Transform3D(0.829818, 0, -0.558035, 0, 1, 0, 0.558035, 0, 0.829818, 
 transform = Transform3D(-0.0758141, 0, -0.997122, 0, 1, 0, 0.997122, 0, -0.0758141, 470.243, 0, -211.694)
 
 [node name="Leaderboar_layout" type="Node3D" parent="Ground"]
-transform = Transform3D(0.614574, 0, -0.788859, 0, 1, 0, 0.788859, 0, 0.614574, 200.899, -8.43888, -797.423)
+transform = Transform3D(0.614574, 0, -0.788859, 0, 1, 0, 0.788859, 0, 0.614574, 200.899, -10.25, -797.423)
 
 [node name="scoreboard_layout" type="Node3D" parent="Ground/Leaderboar_layout"]
 transform = Transform3D(0.117538, 0, 0.993069, 0, 1, 0, -0.993069, 0, 0.117538, -154.162, 0, 5.89728)
