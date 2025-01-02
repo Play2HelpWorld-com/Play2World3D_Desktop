@@ -290,4 +290,4 @@ transform = Transform3D(2.98023e-08, 0, 1, 0, 1, 0, -1, 0, 2.98023e-08, 17, -24,
 transform = Transform3D(0.882947, 0, 0.469471, 0, 1, 0, -0.469471, 0, 0.882947, -180.487, -79, -244.82)
 
 [node name="Pop-Up" parent="." instance=ExtResource("29_lwxr1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20.5798, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.07468, 20.1341, -7.00114)

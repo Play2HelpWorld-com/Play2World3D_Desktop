@@ -1,71 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://d0x1ol0skgw7p"]
+[gd_scene load_steps=2 format=3 uid="uid://d0x1ol0skgw7p"]
 
-[ext_resource type="Script" path="res://data/scene/Play2World/maps/center_map/pop_up.gd" id="1_cbyes"]
-
-[sub_resource type="ViewportTexture" id="ViewportTexture_a22n2"]
-viewport_path = NodePath("Area3D/SubViewport")
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_273jr"]
-size = Vector3(2, 1, 2)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_83g4l"]
+[ext_resource type="PackedScene" uid="uid://bo5to3cs55ywc" path="res://addons/interactive/props/chest/chest.tscn" id="1_hr01y"]
 
 [node name="Pop-Up" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.09857, 0)
-script = ExtResource("1_cbyes")
 
-[node name="Area3D" type="Area3D" parent="."]
+[node name="chest" parent="." instance=ExtResource("1_hr01y")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
 
-[node name="Sprite3D" type="Sprite3D" parent="Area3D"]
-visible = false
-texture = SubResource("ViewportTexture_a22n2")
+[node name="chest2" parent="." instance=ExtResource("1_hr01y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.52092, 1.04072, 1.94952)
 
-[node name="SubViewport" type="SubViewport" parent="Area3D"]
-size = Vector2i(768, 540)
-
-[node name="Label" type="Label" parent="Area3D/SubViewport"]
-offset_left = 131.0
-offset_top = 34.0
-offset_right = 243.0
-offset_bottom = 56.0
-scale = Vector2(4.5, 4.5)
-text = "Snake Game!"
-
-[node name="Button" type="Button" parent="Area3D/SubViewport"]
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -86.0
-offset_top = 195.0
-offset_right = 94.0
-offset_bottom = 255.0
-grow_horizontal = 2
-size_flags_horizontal = 4
-toggle_mode = true
-button_pressed = true
-text = "START"
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-shape = SubResource("BoxShape3D_273jr")
-disabled = true
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Area3D"]
-
-[node name="CSGBox3D" type="CSGBox3D" parent="Area3D/StaticBody3D"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D/StaticBody3D"]
-shape = SubResource("BoxShape3D_83g4l")
-
-[node name="Control" type="Control" parent="Area3D"]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="InfoLabel" type="Label" parent="Area3D/Control"]
-layout_mode = 0
-offset_left = 487.0
-offset_top = 537.0
-offset_right = 713.0
-offset_bottom = 580.0
-text = "Get close to interact!"
+[connection signal="visibility_changed" from="." to="chest" method="_on_pop_up_visibility_changed"]
