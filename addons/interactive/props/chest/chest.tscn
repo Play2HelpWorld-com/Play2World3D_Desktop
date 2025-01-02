@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://bo5to3cs55ywc"]
+[gd_scene load_steps=7 format=3 uid="uid://bo5to3cs55ywc"]
 
 [ext_resource type="PackedScene" uid="uid://bhlk3jlpfm1h0" path="res://addons/interactive/props/chest/source/chest.glb" id="1_1hbqm"]
 [ext_resource type="Script" path="res://addons/interactive/props/chest/chest.gd" id="2_rmilk"]
+[ext_resource type="Material" uid="uid://bjtqdjip4kg41" path="res://addons/interactive/props/chest/outline.tres" id="3_5ewrr"]
 [ext_resource type="PackedScene" uid="uid://bcant1jf3ssg3" path="res://addons/interactive/interaction/Interactable.tscn" id="3_iw05p"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_clxje"]
@@ -12,6 +13,7 @@ size = Vector3(0.614408, 0.517854, 0.586966)
 
 [node name="chest" instance=ExtResource("1_1hbqm")]
 script = ExtResource("2_rmilk")
+highlight_material = ExtResource("3_5ewrr")
 
 [node name="Skeleton3D" parent="Armature" index="0"]
 bones/0/rotation = Quaternion(0, 0, 0, 1)
