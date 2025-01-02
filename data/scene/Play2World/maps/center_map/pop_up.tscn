@@ -1,14 +1,8 @@
 [gd_scene load_steps=2 format=3 uid="uid://d0x1ol0skgw7p"]
 
-[ext_resource type="PackedScene" uid="uid://bo5to3cs55ywc" path="res://addons/interactive/props/chest/chest.tscn" id="1_hr01y"]
+[ext_resource type="PackedScene" uid="uid://k4kikx3kx4qn" path="res://addons/interactive/props/object/object.tscn" id="1_78rt4"]
 
 [node name="Pop-Up" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.09857, 0)
 
-[node name="chest" parent="." instance=ExtResource("1_hr01y")]
-transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
-
-[node name="chest2" parent="." instance=ExtResource("1_hr01y")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.52092, 1.04072, 1.94952)
-
-[connection signal="visibility_changed" from="." to="chest" method="_on_pop_up_visibility_changed"]
+[node name="object" parent="." instance=ExtResource("1_78rt4")]
