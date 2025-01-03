@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cn2th2u5s5714"
+uid="uid://1x06fyfm1764"
 path.s3tc="res://.godot/imported/bee_bot_wing_pattern.png-0fb6987f7cdf3d36a4d700c3fd683f66.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "114c0a3f4c50f9f1f0177b928d2a9af7"
 }
 
 [deps]
@@ -27,8 +24,8 @@ compress/normal_map=1
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
-roughness/mode=1
-roughness/src_normal="res://models/bee_bot/bee_bot_wing_pattern.png"
+roughness/mode=0
+roughness/src_normal=""
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false

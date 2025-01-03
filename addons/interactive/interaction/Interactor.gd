@@ -30,9 +30,9 @@ func get_closest_interactable() -> Interactable:
 			closest_distance = distance
 
 	# Log the closest interactable to the console
-	if closest:
-		print("Closest interactable: ", closest.name)  # Assuming `name` identifies the interactable
-	else:
-		print("No interactable found.")
+	#if closest:
+		#print("Closest interactable: ", closest.name)  # Assuming `name` identifies the interactable
+	#else:
+		#print("No interactable found.")
 	
 	return closest
