@@ -94,7 +94,6 @@ func handle_submit() -> void:
 	$TextEdit.visible = false
 	getAnswer(str($TextEdit.text))
 	$TextEdit.text = ""
-	playAnimation = 'think'
 	
 func getAnswer(text: String) -> void:
 	# Prepare request data (no authorization required)
@@ -105,13 +104,15 @@ func getAnswer(text: String) -> void:
 	}
 	if text == "can you dance?":
 		playAnimation = 'hip-hop'
+		$RichTextLabel.text = ''
+		return 
 	else:
 		# Send the HTTP request
 		$HTTPRequest.request(url, headers, HTTPClient.METHOD_POST, JSON.stringify(body))
 
 func _on_request_completed(result: int, response_code: int, headers: PackedStringArray, body: PackedByteArray) -> void:
 	if response_code == 200:
-		playAnimation = 'idle'
+		playAnimation = 'think'
 		var response_str: String = body.get_string_from_utf8()
 		var response_data: Variant = JSON.parse_string(response_str)
 		if response_data is Dictionary and response_data.has("text"):
