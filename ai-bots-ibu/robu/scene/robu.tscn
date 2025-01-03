@@ -4,14 +4,14 @@
 [ext_resource type="Script" path="res://ai-bots-ibu/robu/scripts/robu.gd" id="2_mq2co"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y1gis"]
-size = Vector3(3.26785, 1.04162, 2.91477)
+size = Vector3(5.51351, 1.04162, 4.81543)
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_62e72"]
 
 [sub_resource type="Theme" id="Theme_3axjd"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_pq1xw"]
-size = Vector3(28.4459, 5.28058, 29.9129)
+size = Vector3(20.6616, 5.28058, 22.1839)
 
 [node name="robu" instance=ExtResource("1_b7pui")]
 script = ExtResource("2_mq2co")
@@ -121,11 +121,11 @@ modulate = Color(0.419608, 0.615686, 1, 1)
 text = "Press Q to ask questions"
 
 [node name="Area3D" type="Area3D" parent="." index="3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.231547, 0.359356, 0.212476)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.668548, 0.359356, 0.212476)
 collision_mask = 3
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0"]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.430056, 0.849921, 0.144872)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.50193, 0.849921, -0.0604421)
 shape = SubResource("BoxShape3D_y1gis")
 
 [node name="TextEdit" type="TextEdit" parent="." index="4"]
@@ -153,7 +153,7 @@ tab_size = 5
 collision_mask = 3
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="greetingArea" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.609063, 2.033, -0.56762)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.576431, 2.033, -0.18872)
 shape = SubResource("BoxShape3D_pq1xw")
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

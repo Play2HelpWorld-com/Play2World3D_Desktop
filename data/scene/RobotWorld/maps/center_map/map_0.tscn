@@ -294,4 +294,4 @@ transform = Transform3D(0.882947, 0, 0.469471, 0, 1, 0, -0.469471, 0, 0.882947, 
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.07468, 20.1341, -7.00114)
 
 [node name="robu" parent="." instance=ExtResource("31_ej37g")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.2779, 20, -39.0863)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.01894, 20, -23.4865)
