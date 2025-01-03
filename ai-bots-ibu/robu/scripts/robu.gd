@@ -1,5 +1,8 @@
 extends Node3D
 
+var do_greet : bool = false
+var do_vow : bool = false
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$HTTPRequest.request_completed.connect(_on_request_completed)
@@ -7,17 +10,25 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	$AnimationPlayer.play('idle')
+	if do_greet:
+		$AnimationPlayer.play('over-here')
+	elif do_vow:
+		$AnimationPlayer.play('bow')
+	else:
+		$AnimationPlayer.play('dwarf-idle')
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	$Label3D.visible = true
 	print("you've entered the bot's area..")
+	do_greet = false
+	do_vow = true
 
 func _on_area_3d_body_exited(body: Node3D) -> void:
 	print("you've left the bot's area..")
 	$Label3D.visible = false
 	$TextEdit.visible = false
 	$RichTextLabel.visible = false
+	do_vow = false
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("ask"):
@@ -74,7 +85,7 @@ func _on_request_completed(result: int, response_code: int, headers: PackedStrin
 		$TextEdit.grab_focus()
 
 func _on_greeting_area_body_entered(body: Node3D) -> void:
-	pass # Replace with function body.
+	do_greet = true
 
 func _on_greeting_area_body_exited(body: Node3D) -> void:
-	pass # Replace with function body.
+	do_greet = false
