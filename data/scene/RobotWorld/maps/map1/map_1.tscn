@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=3 uid="uid://b1lliatyo3jtu"]
 
 [ext_resource type="PackedScene" uid="uid://oej335ccx6ta" path="res://data/scene/RobotWorld/maps/map1/Tiles_map1.tscn" id="1_ks6er"]
-[ext_resource type="PackedScene" uid="uid://b7thekyah17uv" path="res://data/scene/MemeWorld/screens/Screen1.tscn" id="5_weqsi"]
+[ext_resource type="PackedScene" uid="uid://b7thekyah17uv" path="res://data/scene/RobotWorld/screens/Screen1.tscn" id="5_weqsi"]
 [ext_resource type="PackedScene" uid="uid://deogfgyy36b78" path="res://data/scene/RobotWorld/screens/Screen2.tscn" id="6_vlhbw"]
 [ext_resource type="PackedScene" uid="uid://qp0ru4vtfwr3" path="res://data/scene/RobotWorld/screens/Screen3.tscn" id="7_vrttg"]
 [ext_resource type="PackedScene" uid="uid://cx8a6a7070mt5" path="res://data/scene/RobotWorld/screens/Screen4.tscn" id="8_8tues"]
