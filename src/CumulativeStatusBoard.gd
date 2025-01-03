@@ -46,8 +46,8 @@ func fetch_player_data() -> void:
 	# Make the request
 	var result: int = http_request.request(url)
 
-	if result != OK:
-		print("Failed to make HTTP request. Error code:", result)
+	#if result != OK:
+		#print("Failed to make HTTP request. Error code:", result)
 
 func _on_request_completed(
 	result: int, response_code: int, headers: Array, body: PackedByteArray
@@ -58,16 +58,16 @@ func _on_request_completed(
 		var json_parser: JSON = JSON.new()
 		var parse_result: int = json_parser.parse(json)
 
-		if parse_result != OK:
-			print("Failed to parse JSON:", json_parser.get_error_message())
-			return
+		#if parse_result != OK:
+			#print("Failed to parse JSON:", json_parser.get_error_message())
+			#return
 
 		# Access the JSON data
 		var response_data: Dictionary = json_parser.data
 		var total_scores: Array = response_data.get("total_scores", [])
 		update_scoreboard(total_scores)
-	else:
-		print("HTTP Request failed with code:", response_code)
+	#else:
+		#print("HTTP Request failed with code:", response_code)
 
 func update_scoreboard(total_scores: Array) -> void:
 	# Loop through labels and update them
