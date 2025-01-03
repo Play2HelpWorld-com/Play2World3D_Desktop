@@ -29,7 +29,7 @@
 [ext_resource type="PackedScene" uid="uid://bjemhdkhotj32" path="res://data/scene/RobotWorld/signboard/BoardPlay2Travel.tscn" id="24_bmk8e"]
 [ext_resource type="PackedScene" uid="uid://d15xh22sdg3ck" path="res://data/scene/RobotWorld/signboard/BoardPlay2Music.tscn" id="25_h0bif"]
 [ext_resource type="PackedScene" uid="uid://d0x1ol0skgw7p" path="res://data/scene/Play2World/maps/center_map/pop_up.tscn" id="29_lwxr1"]
-[ext_resource type="PackedScene" uid="uid://rcj4aoy8xj8j" path="res://ai-bots-ibu/robu/scene/robu.tscn" id="30_vgev4"]
+[ext_resource type="PackedScene" uid="uid://rcj4aoy8xj8j" path="res://ai-bots-ibu/robu/scene/robu.tscn" id="31_ej37g"]
 
 [node name="Map0" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
@@ -293,5 +293,5 @@ transform = Transform3D(0.882947, 0, 0.469471, 0, 1, 0, -0.469471, 0, 0.882947, 
 [node name="Pop-Up" parent="." instance=ExtResource("29_lwxr1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.07468, 20.1341, -7.00114)
 
-[node name="robu" parent="." instance=ExtResource("30_vgev4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.41724, 20, -37.8965)
+[node name="robu" parent="." instance=ExtResource("31_ej37g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.2279, 20, -28.9619)
