@@ -69,19 +69,19 @@ func _set_walk_run_blending(value: float) -> void:
 
 # Animation control functions
 func idle() -> void:
-	print("Switching to Idle animation")
+	#print("Switching to Idle animation")
 	_main_state_machine.travel("Idle")
 
 func walk() -> void:
-	print("Switching to Walk animation")
+	#print("Switching to Walk animation")
 	_main_state_machine.travel("Walk")
 
 func jump() -> void:
-	print("Switching to Jump animation")
+	#print("Switching to Jump animation")
 	_main_state_machine.travel("Jump")
 
 func fall() -> void:
-	print("Switching to Fall animation")
+	#print("Switching to Fall animation")
 	_main_state_machine.travel("Fall")
 
 func set_face(face_name: String) -> void:

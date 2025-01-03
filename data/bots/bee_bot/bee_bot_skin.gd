@@ -42,7 +42,7 @@ func choose_new_target() -> void:
 		randf() * roam_area.z * 2 - roam_area.z
 	)
 	is_moving = true
-	walk()
+	#walk()
 
 func _on_secondary_action_timer_timeout() -> void:
 	# Trigger a secondary action only if in Idle state
@@ -54,9 +54,9 @@ func _on_secondary_action_timer_timeout() -> void:
 func idle() -> void:
 	_main_state_machine.travel("Idle")
 	_secondary_action_timer.start()
-
-func walk() -> void:
-	_main_state_machine.travel("Walk")
+#
+#func walk() -> void:
+	#_main_state_machine.travel("Walk")
 
 func attack() -> void:
 	_main_state_machine.travel("Attack")

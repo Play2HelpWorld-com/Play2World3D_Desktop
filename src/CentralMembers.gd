@@ -27,7 +27,7 @@ extends Node3D
 ]
 
 # Timer for polling API data
-var polling_interval: float = 5.0  # Time in seconds
+var polling_interval: float = 120  # Time in seconds
 var polling_timer: Timer
 var http_request: HTTPRequest
 
@@ -48,7 +48,7 @@ func _ready() -> void:
 	polling_timer.timeout.connect(fetch_member_data)
 
 	# Fetch data immediately on start
-	print("Fetching member data immediately...")
+	#print("Fetching member data immediately...")
 	fetch_member_data()
 
 func fetch_member_data() -> void:
@@ -59,38 +59,38 @@ func fetch_member_data() -> void:
 	var url: String = "https://play2helpbackend.onrender.com/api/games/getMemberData/"
 	
 	# Make the request
-	print("Making HTTP request to:", url)
+	#print("Making HTTP request to:", url)
 	var result: int = http_request.request(url)
 
-	if result != OK:
-		print("Failed to make HTTP request. Error code:", result)
-	else:
-		print("HTTP request sent successfully, waiting for response...")
+	#if result != OK:
+		#print("Failed to make HTTP request. Error code:", result)
+	#else:
+		#print("HTTP request sent successfully, waiting for response...")
 
 func _on_request_completed(
 	result: int, response_code: int, headers: Array, body: PackedByteArray
 ) -> void:
-	print("Request completed with response code:", response_code)
+	#print("Request completed with response code:", response_code)
 
 	if response_code == 200:
 		var json: String = body.get_string_from_utf8()
-		print("Response JSON:", json)
+		#print("Response JSON:", json)
 
 		var json_parser: JSON = JSON.new()
 		var parse_result: int = json_parser.parse(json)
 
-		if parse_result != OK:
-			print("Failed to parse JSON:", json_parser.get_error_message())
-			return
+		#if parse_result != OK:
+			#print("Failed to parse JSON:", json_parser.get_error_message())
+			#return
 
 		var response_data: Dictionary = json_parser.data
-		print("Parsed Data:", response_data)
+		#print("Parsed Data:", response_data)
 
 		# Fetching the 'member' array
 		var member_data: Array = response_data.get("member", [])
 		update_member_data(member_data)
-	else:
-		print("HTTP Request failed with code:", response_code)
+	#else:
+		#print("HTTP Request failed with code:", response_code)
 
 	# Restart the polling timer
 	polling_timer.start()
@@ -98,7 +98,7 @@ func _on_request_completed(
 
 func update_member_data(member_data: Array) -> void:
 	if member_data.size() == 0:
-		print("No member data available.")
+		#print("No member data available.")
 		return
 
 	for i in range(name_labels.size()):
@@ -114,10 +114,10 @@ func update_member_data(member_data: Array) -> void:
 			var brands: String = str(data.get("brands", []))  # Ensure this is a string
 
 			# Debugging print statements
-			print("Member Name: ", name)
-			print("Member Role: ", role)
-			print("Earned Tokens: ", earned_tokens)
-			print("Earned Dollars: ", earned_dollars)
+			#print("Member Name: ", name)
+			#print("Member Role: ", role)
+			#print("Earned Tokens: ", earned_tokens)
+			#print("Earned Dollars: ", earned_dollars)
 
 			# Update the labels
 			name_labels[i].text = name
@@ -136,4 +136,4 @@ func update_member_data(member_data: Array) -> void:
 			earned_dollars_labels[i].text = "Processing..."
 			brands_labels[i].text = "Processing..."
 
-	print("Updated member data displayed.")
+	#print("Updated member data displayed.")
