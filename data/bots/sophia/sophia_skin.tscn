@@ -6,6 +6,10 @@
 [ext_resource type="Texture2D" uid="uid://bhraucuo8k2yp" path="res://data/bots/sophia/textures/eyes_diffuse_map.png" id="4_otigg"]
 [ext_resource type="Texture2D" uid="uid://b02thoifvyg4r" path="res://data/bots/sophia/textures/eyes_normal_map.png" id="5_it8hg"]
 [ext_resource type="Material" uid="uid://bh71cwt3sn7ce" path="res://data/bots/sophia/materials/sophia_mouth.tres" id="6_yl3ne"]
+<<<<<<< HEAD
+=======
+
+>>>>>>> df40a2fa1a150bb9e96adebf9dcf6e7a5515027f
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8r7u4"]
 resource_local_to_scene = true

@@ -1,5 +1,6 @@
 extends Node3D
 
+<<<<<<< HEAD
 # Animation Tree
 @onready var _animation_tree: AnimationTree = $AnimationTree
 @onready var _main_state_machine: AnimationNodeStateMachinePlayback = _animation_tree.get("parameters/StateMachine/playback")
@@ -64,3 +65,11 @@ func _set_eyes(eyes_name: String) -> void:
 	var texture_offset: float = _eyes_atlas.get(eyes_name, 0.0)
 	_eye_left_mat.set("uv1_offset", Vector3(0.0, texture_offset, 0.0))
 	_eye_right_mat.set("uv1_offset", Vector3(0.0, texture_offset, 0.0))
+=======
+@onready var _animation_tree: AnimationTree = $AnimationTree
+@onready var _main_state_machine: AnimationNodeStateMachinePlayback = _animation_tree.get("parameters/StateMachine/playback") as AnimationNodeStateMachinePlayback
+
+func _ready() -> void:
+	# Set the animation state machine to Idle
+	_main_state_machine.travel("Idle")
+>>>>>>> df40a2fa1a150bb9e96adebf9dcf6e7a5515027f
