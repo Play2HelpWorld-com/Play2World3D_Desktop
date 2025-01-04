@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://brxjhwwxf4n3o"]
+
+[ext_resource type="PackedScene" uid="uid://k4kikx3kx4qn" path="res://addons/interactive/props/object/object.tscn" id="2_efj1n"]
+[ext_resource type="Script" path="res://addons/interactive/props/object/321.gd" id="3_va5id"]
+
+[node name="321" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.09857, 0)
+
+[node name="object" parent="." instance=ExtResource("2_efj1n")]
+script = ExtResource("3_va5id")
+game_url = "https://play2helpgamesserver.onrender.com/racingGame/?to=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzM2MDYxMzMwLCJpYXQiOjE3MzU5NzQ5MzAsImp0aSI6IjZmYzlmZDk3MzY0OTQzM2JiOTAwOGM0YWU5MzQxOTUyIiwidXNlcl9pZCI6MTF9.ymAgeQl2e7FxUfe5LWJx8pNvBPvhhnOj_3Qq5T6yTfw"
