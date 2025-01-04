@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://blijdiph056y1" path="res://data/scene/RobotWorld/maps/map8/map_8.tscn" id="16_rciwc"]
 [ext_resource type="PackedScene" uid="uid://bfqpdxa811h2a" path="res://data/scene/RobotWorld/maps/map9/map_9.tscn" id="17_lgn1f"]
 
+
 [node name="MemeWorld" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 50, 0)
 
