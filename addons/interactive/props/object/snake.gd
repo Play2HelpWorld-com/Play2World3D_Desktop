@@ -2,7 +2,7 @@ extends Node3D
 
 @export var highlight_material: StandardMaterial3D
 @export var new_scene_path: String = "res://addons/interactive/props/window/window.tscn"
-@export var game_url: String = "https://play2helpgamesserver.onrender.com/tetrixGame/?to=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzM2MDYxMzMwLCJpYXQiOjE3MzU5NzQ5MzAsImp0aSI6IjZmYzlmZDk3MzY0OTQzM2JiOTAwOGM0YWU5MzQxOTUyIiwidXNlcl9pZCI6MTF9.ymAgeQl2e7FxUfe5LWJx8pNvBPvhhnOj_3Qq5T6yTfw"
+@export var game_url: String = "https://play2helpgamesserver.onrender.com/snakeGame/?to=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzM2MDYxMzMwLCJpYXQiOjE3MzU5NzQ5MzAsImp0aSI6IjZmYzlmZDk3MzY0OTQzM2JiOTAwOGM0YWU5MzQxOTUyIiwidXNlcl9pZCI6MTF9.ymAgeQl2e7FxUfe5LWJx8pNvBPvhhnOj_3Qq5T6yTfw"
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var chest_meshinstance: MeshInstance3D = $Armature/Skeleton3D/top_Chest_0
