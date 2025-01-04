@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://k4kikx3kx4qn"]
+[gd_scene load_steps=7 format=3 uid="uid://k4kikx3kx4qn"]
 
 [ext_resource type="PackedScene" uid="uid://bhlk3jlpfm1h0" path="res://addons/interactive/props/chest/source/chest.glb" id="1_w3qd4"]
 [ext_resource type="Script" path="res://addons/interactive/props/object/object.gd" id="2_kkw3q"]
+[ext_resource type="PackedScene" uid="uid://mwqqyoo76wvc" path="res://data/bots/sophia/sophia_skin.tscn" id="3_sicjq"]
 [ext_resource type="PackedScene" uid="uid://bcant1jf3ssg3" path="res://addons/interactive/interaction/Interactable.tscn" id="3_trsna"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_clxje"]
@@ -17,16 +18,21 @@ script = ExtResource("2_kkw3q")
 bones/0/rotation = Quaternion(0, 0, 0, 1)
 bones/1/rotation = Quaternion(0.75707, 7.00948e-07, 8.12244e-07, 0.653334)
 
+[node name="top_Chest_0" parent="Armature/Skeleton3D" index="0"]
+visible = false
+
 [node name="StaticBody3D" type="StaticBody3D" parent="." index="2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.251476, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 2.26042, 0, 0, 0, 1, 0, 0.321079, 0)
 shape = SubResource("BoxShape3D_clxje")
 
 [node name="Interactable" parent="." index="3" instance=ExtResource("3_trsna")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.251476, 0)
 
 [node name="CollisionShape3D" parent="Interactable" index="0"]
+transform = Transform3D(1, 0, 0, 0, 2.35586, 0, 0, 0, 1, 0, 0.34886, 0)
 shape = SubResource("BoxShape3D_frebs")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="." index="4"]
@@ -34,6 +40,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.298945, 0)
 light_color = Color(1, 0.972549, 0.345098, 1)
 light_energy = 0.0
 omni_range = 1.287
+
+[node name="SophiaSkin" parent="." index="5" instance=ExtResource("3_sicjq")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.0896995, 0.198917, 0.0520527)
 
 [connection signal="focused" from="Interactable" to="." method="_on_interactable_focused"]
 [connection signal="interacted" from="Interactable" to="." method="_on_interactable_interacted"]

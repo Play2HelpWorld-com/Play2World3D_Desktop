@@ -1,11 +1,12 @@
 [gd_scene load_steps=55 format=3 uid="uid://mwqqyoo76wvc"]
 
-[ext_resource type="PackedScene" uid="uid://douscbe20506q" path="res://models/sophia/mini_sophia.glb" id="1_f2l4o"]
-[ext_resource type="Script" path="res://models/sophia/sophia_skin.gd" id="1_n654l"]
-[ext_resource type="Material" uid="uid://b3oxsg3uw17gl" path="res://models/sophia/materials/sophia_eyes.tres" id="3_hrjkk"]
-[ext_resource type="Texture2D" uid="uid://bhraucuo8k2yp" path="res://models/sophia/textures/eyes_diffuse_map.png" id="4_otigg"]
-[ext_resource type="Texture2D" uid="uid://b02thoifvyg4r" path="res://models/sophia/textures/eyes_normal_map.png" id="5_it8hg"]
-[ext_resource type="Material" uid="uid://bh71cwt3sn7ce" path="res://models/sophia/materials/sophia_mouth.tres" id="6_yl3ne"]
+[ext_resource type="PackedScene" uid="uid://douscbe20506q" path="res://data/bots/sophia/mini_sophia.glb" id="1_f2l4o"]
+[ext_resource type="Script" path="res://data/bots/sophia/sophia_skin.gd" id="1_n654l"]
+[ext_resource type="Material" uid="uid://b3oxsg3uw17gl" path="res://data/bots/sophia/materials/sophia_eyes.tres" id="3_hrjkk"]
+[ext_resource type="Texture2D" uid="uid://bhraucuo8k2yp" path="res://data/bots/sophia/textures/eyes_diffuse_map.png" id="4_otigg"]
+[ext_resource type="Texture2D" uid="uid://b02thoifvyg4r" path="res://data/bots/sophia/textures/eyes_normal_map.png" id="5_it8hg"]
+[ext_resource type="Material" uid="uid://bh71cwt3sn7ce" path="res://data/bots/sophia/materials/sophia_mouth.tres" id="6_yl3ne"]
+
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8r7u4"]
 resource_local_to_scene = true
