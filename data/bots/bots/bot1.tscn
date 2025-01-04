@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=4 uid="uid://db07b4t7tllid"]
+[gd_scene load_steps=29 format=4 uid="uid://ddvtv4csvtymy"]
 
 [ext_resource type="Script" path="res://data/bots/bots/bot_1.gd" id="1_7ooyj"]
 [ext_resource type="Texture2D" uid="uid://bh7yegkr01of5" path="res://data/bots/bots/astronaut_Barbara/Astronaut_BarbaraTheBee_Atlas.png" id="1_172a7"]
@@ -5974,7 +5974,7 @@ transform = Transform3D(1, 0, 0, -3.72529e-09, 1, -1.07102e-08, 0, -1.86265e-09,
 curve = SubResource("Curve3D_hniqd")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.430241, 0.0873896, -0.191253, -0.0765794, 0.994761, -0.0387075, 0.235413, 0.16388, 0.336943, 6.54245, 0.0892397, 3.43689)
+transform = Transform3D(0.430241, 0.0873899, -0.191253, -0.0765795, 0.994761, -0.0387076, 0.235413, 0.16388, 0.336943, 6.54246, 0.0892394, 3.43689)
 progress = 8.88791
 
 [node name="Astronaut_BarbaraTheBee" type="Node3D" parent="Path3D/PathFollow3D"]

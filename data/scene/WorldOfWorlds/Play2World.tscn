@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dvv4pbnyftgl8"]
+[gd_scene load_steps=17 format=3 uid="uid://bfnfht5an0oe6"]
 
 [ext_resource type="PackedScene" uid="uid://dbv7xvbqvmyx0" path="res://data/scene/RobotWorld/maps/center_map/map_0.tscn" id="1_ffilu"]
 [ext_resource type="PackedScene" uid="uid://b1lliatyo3jtu" path="res://data/scene/RobotWorld/maps/map1/map_1.tscn" id="2_dbpig"]
@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://blijdiph056y1" path="res://data/scene/RobotWorld/maps/map8/map_8.tscn" id="9_25o6o"]
 [ext_resource type="PackedScene" uid="uid://bfqpdxa811h2a" path="res://data/scene/RobotWorld/maps/map9/map_9.tscn" id="10_dkmv3"]
 [ext_resource type="PackedScene" uid="uid://uan7xu6y7rg7" path="res://data/scene/RobotWorld/maps/center_map/Tiles_bridge.tscn" id="11_fujoq"]
-[ext_resource type="PackedScene" uid="uid://db07b4t7tllid" path="res://data/bots/bots/bot1.tscn" id="12_bu010"]
+[ext_resource type="PackedScene" uid="uid://ddvtv4csvtymy" path="res://data/bots/bots/bot1.tscn" id="12_bu010"]
 [ext_resource type="PackedScene" uid="uid://bpjqcswabdtyb" path="res://data/bots/beetle_bot/beetlebot_skin.tscn" id="13_1ouxh"]
 [ext_resource type="PackedScene" uid="uid://482rxnrhe64v" path="res://data/bots/bee_bot/bee_bot_skin.tscn" id="14_vquxb"]
 [ext_resource type="PackedScene" uid="uid://bdyptm7smjixm" path="res://data/bots/gdbot/gdbot_skin.tscn" id="15_oqlcr"]

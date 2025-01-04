@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://dbv7xvbqvmyx0"]
+[gd_scene load_steps=32 format=3 uid="uid://dbv7xvbqvmyx0"]
 
 [ext_resource type="PackedScene" uid="uid://cekjrjqcl4bu5" path="res://data/scene/RobotWorld/maps/center_map/Tiles_map0.tscn" id="1_1ddmg"]
 [ext_resource type="PackedScene" uid="uid://c5ndqrparso5a" path="res://data/scene/RobotWorld/objects/p_2_wbillboard.tscn" id="4_qbaij"]
@@ -29,6 +29,7 @@
 [ext_resource type="PackedScene" uid="uid://bjemhdkhotj32" path="res://data/scene/RobotWorld/signboard/BoardPlay2Travel.tscn" id="24_bmk8e"]
 [ext_resource type="PackedScene" uid="uid://d15xh22sdg3ck" path="res://data/scene/RobotWorld/signboard/BoardPlay2Music.tscn" id="25_h0bif"]
 [ext_resource type="PackedScene" uid="uid://d0x1ol0skgw7p" path="res://data/scene/Play2World/maps/center_map/pop_up.tscn" id="29_lwxr1"]
+[ext_resource type="PackedScene" uid="uid://8wainyta1dmt" path="res://addons/pathfinder-npc/scene/level3.tscn" id="31_0ensk"]
 [ext_resource type="PackedScene" uid="uid://rcj4aoy8xj8j" path="res://ai-bots-ibu/robu/scene/robu.tscn" id="31_ej37g"]
 
 [node name="Map0" type="Node3D"]
@@ -296,3 +297,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.07468, 20.1341, -7.00114)
 
 [node name="robu" parent="." instance=ExtResource("31_ej37g")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.2279, 20, -28.9619)
+
+[node name="Node3D" parent="." instance=ExtResource("31_0ensk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20.1546, 0)
