@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://djfjqloag2bvr"]
+
+[ext_resource type="PackedScene" uid="uid://k4kikx3kx4qn" path="res://addons/interactive/props/object/object.tscn" id="1_3pogm"]
+[ext_resource type="Script" path="res://addons/interactive/props/object/raileush.gd" id="2_kcxv8"]
+
+[node name="railrush" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.09857, 0)
+
+[node name="object" parent="." instance=ExtResource("1_3pogm")]
+script = ExtResource("2_kcxv8")
+game_url = "https://play2helpgamesserver.onrender.com/railrushGame/?to=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzM2MDYxMzMwLCJpYXQiOjE3MzU5NzQ5MzAsImp0aSI6IjZmYzlmZDk3MzY0OTQzM2JiOTAwOGM0YWU5MzQxOTUyIiwidXNlcl9pZCI6MTF9.ymAgeQl2e7FxUfe5LWJx8pNvBPvhhnOj_3Qq5T6yTfw"
