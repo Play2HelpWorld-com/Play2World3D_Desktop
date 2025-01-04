@@ -191,6 +191,7 @@ transform = Transform3D(0.708246, 0.163339, -0.686809, -0.0238983, 0.977856, 0.2
 
 [node name="Objects" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+visible = false
 
 [node name="CircularVillage" parent="." instance=ExtResource("15_xw5hy")]
 transform = Transform3D(0.642787, 0, -0.766044, 0, 1, 0, 0.766044, 0, 0.642787, 38.2878, -296.4, -613.662)
