@@ -2,11 +2,14 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bhyu0vnoseruk"
+uid="uid://cn248u73we8tg"
 path.s3tc="res://.godot/imported/aloe_0.png-1242e52e68e2f6213f3d01f831b31759.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
+}
+generator_parameters={
+"md5": "3010476ed3c7af47aef55dcd904c7c92"
 }
 
 [deps]

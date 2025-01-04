@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://dsvyk076rv4rj"]
-
-[ext_resource type="PackedScene" uid="uid://k4kikx3kx4qn" path="res://addons/interactive/props/object/object.tscn" id="1_vc3v1"]
-
-[node name="tetrix" type="Node3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.09857, 0)
-
-[node name="object" parent="." instance=ExtResource("1_vc3v1")]
