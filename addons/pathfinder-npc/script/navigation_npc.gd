@@ -74,13 +74,13 @@ func select_new_destination():
 func check_if_stuck():
 	# Check if the NPC has moved significantly
 	if global_position.distance_to(last_position) < stuck_threshold:
-		print("NPC is stuck. Changing direction...")
+		#print("NPC is stuck. Changing direction...")
 		velocity = Vector3.ZERO  # Stop movement
 		animation_state.travel("idle")  # Play idle animation
 		select_new_destination()  # Pick a new destination
 		stuck_timer = 0.0  # Reset the stuck timer
-	else:
-		print("NPC is not stuck. Continuing...")
+	#else:
+		#print("NPC is not stuck. Continuing...")
 
 func _on_interactable_interacted(interactor: Node) -> void:
 	animation_timer = 0.0

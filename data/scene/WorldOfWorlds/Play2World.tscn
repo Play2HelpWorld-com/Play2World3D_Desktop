@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://bfnfht5an0oe6"]
+[gd_scene load_steps=13 format=3 uid="uid://bfnfht5an0oe6"]
 
 [ext_resource type="PackedScene" uid="uid://dbv7xvbqvmyx0" path="res://data/scene/RobotWorld/maps/center_map/map_0.tscn" id="1_ffilu"]
 [ext_resource type="PackedScene" uid="uid://b1lliatyo3jtu" path="res://data/scene/RobotWorld/maps/map1/map_1.tscn" id="2_dbpig"]
@@ -12,10 +12,6 @@
 [ext_resource type="PackedScene" uid="uid://bfqpdxa811h2a" path="res://data/scene/RobotWorld/maps/map9/map_9.tscn" id="10_dkmv3"]
 [ext_resource type="PackedScene" uid="uid://uan7xu6y7rg7" path="res://data/scene/RobotWorld/maps/center_map/Tiles_bridge.tscn" id="11_fujoq"]
 [ext_resource type="PackedScene" uid="uid://ddvtv4csvtymy" path="res://data/bots/bots/bot1.tscn" id="12_bu010"]
-[ext_resource type="PackedScene" uid="uid://bpjqcswabdtyb" path="res://data/bots/beetle_bot/beetlebot_skin.tscn" id="13_1ouxh"]
-[ext_resource type="PackedScene" uid="uid://482rxnrhe64v" path="res://data/bots/bee_bot/bee_bot_skin.tscn" id="14_vquxb"]
-[ext_resource type="PackedScene" uid="uid://bdyptm7smjixm" path="res://data/bots/gdbot/gdbot_skin.tscn" id="15_oqlcr"]
-[ext_resource type="PackedScene" uid="uid://cy36aygvs66pn" path="res://data/bots/gobot/gobot_skin.tscn" id="16_mfvqe"]
 
 [node name="Play2World" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 50, 0)
@@ -82,15 +78,3 @@ transform = Transform3D(0.88437, 0, -0.466788, 0, 1, 0, 0.466788, 0, 0.88437, 57
 
 [node name="Node3D" parent="." instance=ExtResource("12_bu010")]
 transform = Transform3D(1.27811, 0, -0.529712, 0, 2.03878, 0, 0.667525, 0, 1.01424, -27.3213, -14.0034, -564.878)
-
-[node name="BeetlebotSkin" parent="." instance=ExtResource("13_1ouxh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.141, -0.218201, -29.7574)
-
-[node name="BeebotSkin" parent="." instance=ExtResource("14_vquxb")]
-transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 32.5243, 1.6954, -32.3415)
-
-[node name="GDbotSkin" parent="." instance=ExtResource("15_oqlcr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.8677, -0.218201, -34.5015)
-
-[node name="GobotSkin" parent="." instance=ExtResource("16_mfvqe")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.98759, -0.218201, -29.5767)
