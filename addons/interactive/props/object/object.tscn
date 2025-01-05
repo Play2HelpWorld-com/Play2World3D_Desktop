@@ -44,6 +44,10 @@ omni_range = 1.287
 [node name="SophiaSkin" parent="." index="5" instance=ExtResource("4_ugro8")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.0582006, 0.100583, 0.2935)
 
+[node name="Label3D" type="Label3D" parent="." index="6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0546396, 1.34387, 0)
+text = "[E] to interact"
+
 [connection signal="focused" from="Interactable" to="." method="_on_interactable_focused"]
 [connection signal="interacted" from="Interactable" to="." method="_on_interactable_interacted"]
 [connection signal="unfocused" from="Interactable" to="." method="_on_interactable_unfocused"]

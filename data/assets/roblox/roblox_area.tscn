@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://cxbisf1fij55i"]
+[gd_scene load_steps=30 format=3 uid="uid://cxbisf1fij55i"]
 
 [ext_resource type="PackedScene" uid="uid://d1n0cyah04trf" path="res://data/assets/roblox/KayKit_Furniture_Bits_1.0_FREE/KayKit_Furniture_Bits_1.0_FREE/Assets/gltf/cactus_small_B.gltf" id="1_n0j0y"]
 [ext_resource type="PackedScene" uid="uid://bo781jyeoavny" path="res://data/assets/roblox/KayKit_Prototype_Bits_1.0_FREE/Assets/gltf/Floor.gltf" id="1_ya55i"]
@@ -28,6 +28,9 @@
 [ext_resource type="PackedScene" uid="uid://e5u5ygmufr48" path="res://data/assets/roblox/KayKit_Furniture_Bits_1.0_FREE/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/pictureframe_standing_B.fbx" id="23_5t5cg"]
 [ext_resource type="PackedScene" uid="uid://bgideu4bb4bp3" path="res://data/assets/roblox/KayKit_Furniture_Bits_1.0_FREE/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/cactus_small_A.fbx" id="24_ioatm"]
 [ext_resource type="PackedScene" uid="uid://7drjn1jy823a" path="res://data/assets/roblox/KayKit_Furniture_Bits_1.0_FREE/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/rug_rectangle_A.fbx" id="25_fgkbe"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_by3nw"]
+size = Vector3(1.12805, 1, 2.38672)
 
 [node name="Roblox Area" type="Node3D"]
 
@@ -332,3 +335,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0892478, 0.941811, 0.228621
 
 [node name="rug_rectangle_A" parent="decorations" instance=ExtResource("25_fgkbe")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.604792, 0.710229, -5.04241)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(126.275, 0, 0, 0, 19.0837, 0, 0, 0, 37.9609, 5.41319, 0.884164, -2.70459)
+shape = SubResource("BoxShape3D_by3nw")
