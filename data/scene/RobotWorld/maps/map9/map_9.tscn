@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bfqpdxa811h2a"]
+[gd_scene load_steps=4 format=3 uid="uid://bfqpdxa811h2a"]
 
-[ext_resource type="PackedScene" uid="uid://c5jx1p3vxxyde" path="res://data/scene/Play2World/maps/map9/Tiles_map9.tscn" id="1_e7lay"]
-[ext_resource type="PackedScene" uid="uid://diin7dq5f5alp" path="res://data/scene/Play2World/maps/map9/Tiles_lobby_map9.tscn" id="2_2nggj"]
+[ext_resource type="PackedScene" uid="uid://c5jx1p3vxxyde" path="res://data/scene/RobotWorld/maps/map9/Tiles_map9.tscn" id="1_e7lay"]
+[ext_resource type="PackedScene" uid="uid://diin7dq5f5alp" path="res://data/scene/RobotWorld/maps/map9/Tiles_lobby_map9.tscn" id="2_2nggj"]
+[ext_resource type="PackedScene" uid="uid://cxbisf1fij55i" path="res://data/assets/roblox/roblox_area.tscn" id="3_fn6e2"]
 
 [node name="Map9" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
@@ -16,3 +17,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 254, 267)
 [node name="Trees" type="Node3D" parent="."]
 
 [node name="Objects" type="Node3D" parent="."]
+
+[node name="Roblox Area" parent="." instance=ExtResource("3_fn6e2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 71.7986, 453.877, 131.834)

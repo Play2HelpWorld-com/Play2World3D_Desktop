@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://bfnfht5an0oe6"]
+[gd_scene load_steps=20 format=3 uid="uid://bfnfht5an0oe6"]
 
 [ext_resource type="PackedScene" uid="uid://dbv7xvbqvmyx0" path="res://data/scene/RobotWorld/maps/center_map/map_0.tscn" id="1_ffilu"]
 [ext_resource type="PackedScene" uid="uid://b1lliatyo3jtu" path="res://data/scene/RobotWorld/maps/map1/map_1.tscn" id="2_dbpig"]
@@ -7,7 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://bb785kyru02i" path="res://data/scene/RobotWorld/maps/map4/map_4.tscn" id="5_c1tjj"]
 [ext_resource type="PackedScene" uid="uid://bwcarqagxhrlj" path="res://data/scene/RobotWorld/maps/map5/map_5.tscn" id="6_x1316"]
 [ext_resource type="PackedScene" uid="uid://d0kbidr4cxh2d" path="res://data/scene/RobotWorld/maps/map6/map_6.tscn" id="7_ejn6o"]
-[ext_resource type="PackedScene" uid="uid://bwulgp58jx23l" path="res://data/scene/RobotWorld/maps/map7/map_7.tscn" id="8_niqnw"]
+[ext_resource type="PackedScene" uid="uid://big5ascj0l2yi" path="res://data/scene/Play2World/maps/map7/Tiles_map7.tscn" id="8_c0u5h"]
+[ext_resource type="PackedScene" uid="uid://cxi078t8s3ptc" path="res://data/scene/Play2World/maps/map7/Tiles_lobby_map7.tscn" id="9_1bl1u"]
 [ext_resource type="PackedScene" uid="uid://blijdiph056y1" path="res://data/scene/RobotWorld/maps/map8/map_8.tscn" id="9_25o6o"]
 [ext_resource type="PackedScene" uid="uid://bfqpdxa811h2a" path="res://data/scene/RobotWorld/maps/map9/map_9.tscn" id="10_dkmv3"]
 [ext_resource type="PackedScene" uid="uid://uan7xu6y7rg7" path="res://data/scene/RobotWorld/maps/center_map/Tiles_bridge.tscn" id="11_fujoq"]
@@ -43,8 +44,20 @@ transform = Transform3D(0.998699, 0, 0.0509936, 0, 1, 0, -0.0509936, 0, 0.998699
 [node name="Map6" parent="." instance=ExtResource("7_ejn6o")]
 transform = Transform3D(-0.211837, 0, -0.977305, 0, 1, 0, 0.977305, 0, -0.211837, 846.407, -467.877, -1461.74)
 
-[node name="Map7" parent="." instance=ExtResource("8_niqnw")]
+[node name="Map7" type="Node3D" parent="."]
 transform = Transform3D(-0.145703, 0, -0.989329, 0, 1, 0, 0.989329, 0, -0.145703, 1098.47, -518.086, -764.529)
+
+[node name="Ground" type="Node3D" parent="Map7"]
+
+[node name="Tiles_map2" parent="Map7/Ground" instance=ExtResource("8_c0u5h")]
+
+[node name="Tiles_map3" parent="Map7/Ground" instance=ExtResource("9_1bl1u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 87, 265)
+visible = false
+
+[node name="Trees" type="Node3D" parent="Map7"]
+
+[node name="Objects" type="Node3D" parent="Map7"]
 
 [node name="Map8" parent="." instance=ExtResource("9_25o6o")]
 transform = Transform3D(-0.467452, 0, -0.884019, 0, 1, 0, 0.884019, 0, -0.467452, 1044.7, -416.505, -97.5971)
