@@ -4,6 +4,7 @@
 
 [node name="WebView" type="WebView" parent="."]
 full_window_size = false
+url = "https://www.roblox.com/users/4897189523/profile"
 devtools = false
 clipboard = false
 focused = false
