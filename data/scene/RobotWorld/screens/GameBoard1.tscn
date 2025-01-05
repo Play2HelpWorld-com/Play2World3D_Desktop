@@ -18,7 +18,7 @@ size = Vector3(2, 10, 1)
 
 [node name="Title" type="Label3D" parent="Billboard"]
 transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 0, 4.76583, 0.6)
-text = "Snake Game"
+text = "AI2BC"
 font_size = 24
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
