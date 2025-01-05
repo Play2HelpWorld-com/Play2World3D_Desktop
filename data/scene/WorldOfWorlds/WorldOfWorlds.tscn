@@ -5,8 +5,8 @@
 [ext_resource type="Resource" uid="uid://qabpabfggsdp" path="res://data/team.tres" id="4_7rc8g"]
 [ext_resource type="Resource" uid="uid://cimhewj2wn54n" path="res://data/green_team.tres" id="5_nphkk"]
 [ext_resource type="Resource" uid="uid://r855pcta01ie" path="res://data/purple_team.tres" id="6_khoxl"]
-[ext_resource type="PackedScene" uid="uid://bga4pdoo5a2mi" path="res://data/scene/Play2World/SurfaceWater.tscn" id="7_ugjrf"]
-[ext_resource type="PackedScene" uid="uid://dvv4pbnyftgl8" path="res://data/scene/WorldOfWorlds/RobotWorld.tscn" id="8_lhdov"]
+[ext_resource type="PackedScene" uid="uid://bga4pdoo5a2mi" path="res://data/scene/RobotWorld/SurfaceWater.tscn" id="7_ugjrf"]
+[ext_resource type="PackedScene" uid="uid://dvv4pbnyftgl8" path="res://data/scene/WorldOfWorlds/MemeWorld.tscn" id="8_lhdov"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_yeewp"]
 sky_top_color = Color(0.685566, 0.615091, 0.735107, 1)
