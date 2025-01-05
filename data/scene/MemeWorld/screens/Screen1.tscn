@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://b7thekyah17uv"]
 
 [ext_resource type="Script" path="res://src/TBWObject.gd" id="1_mt0sp"]
-[ext_resource type="PackedScene" uid="uid://bun0xknbjk31g" path="res://data/scene/Play2World/screens/GameBoard1.tscn" id="2_d5kty"]
+[ext_resource type="PackedScene" uid="uid://bun0xknbjk31g" path="res://data/scene/RobotWorld/screens/GameBoard1.tscn" id="2_d5kty"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ta8v7"]
 albedo_color = Color(0.957565, 0.834514, 0.892163, 1)
