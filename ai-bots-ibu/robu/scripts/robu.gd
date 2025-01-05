@@ -50,7 +50,7 @@ func rotate_to_direction() -> void:
 func switch_animations() -> void:
 	var animations : Array = ["walk", "looking"]
 	current_animation = animations[randi() % animations.size()]
-	print("Switched animation to: ", current_animation)
+	#print("Switched animation to: ", current_animation)
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	$Label3D.visible = true
