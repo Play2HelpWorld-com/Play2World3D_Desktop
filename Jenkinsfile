@@ -9,7 +9,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Checkout code from Git repository
-                dir('/home/godot') { // Change to the desired checkout directory
+                dir('/home/godot/Play2World3D_Desktop') { // Change to the desired checkout directory
                     git branch: 'development', url: 'https://github.com/Play2HelpWorld-com/Play2World3D_Desktop.git' // Replace with your git repo URL
                 }
             }
@@ -36,7 +36,7 @@ pipeline {
                     }
 
                     // Upload the ZIP file to GCS
-                    sh "gsutil cp /home/godot/Play2World3D_Desktop/${zipFileName} gs://$GCS_BUCKET/"
+                    sh "gsutil cp /home/godot/${zipFileName} gs://$GCS_BUCKET/"
                 }
             }
         }
