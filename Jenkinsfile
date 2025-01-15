@@ -9,9 +9,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Checkout code from Git repository
-                dir('/home/godot/') { // Change to the desired checkout directory
-                    git branch: 'development', url: 'https://github.com/Play2HelpWorld-com/Play2World3D_Desktop.git' // Replace with your git repo URL
-                }
+                git branch: 'development', url: 'https://github.com/Play2HelpWorld-com/Play2World3D_Desktop.git' // Replace with your git repo URL
             }
         }
 
@@ -30,13 +28,17 @@ pipeline {
                     // Define the output ZIP file name using the build number
                     def zipFileName = "play2world3d_desktop_${env.GIT_BUILD_NUMBER}.zip"
 
+                    // Path for zip folder
+                    def zipFolderPath = '/home/godot/zip_folder'
+
+                    // Ensure the zip_folder exists before exporting
+                    sh "mkdir -p ${zipFolderPath}"
+
                     // Run Godot export command to create a ZIP file
-                    dir('/home/godot/Play2World3D_Desktop') { // Ensure the correct directory for export
-                        sh "godot --headless --export-pack 'win' /home/godot/zip_folder/${zipFileName}"
-                    }
+                    sh "godot --headless --export-pack 'win' ${zipFolderPath}/${zipFileName}"
 
                     // Upload the ZIP file to GCS
-                    sh "gsutil cp /home/godot/zip_folder/${zipFileName} gs://$GCS_BUCKET/"
+                    sh "gsutil cp ${zipFolderPath}/${zipFileName} gs://$GCS_BUCKET/"
                 }
             }
         }
