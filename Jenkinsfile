@@ -22,23 +22,29 @@ pipeline {
             }
         }
 
+        stage('Import Resources') {
+            steps {
+                script {
+                    // Import resources to ensure they're properly handled
+                    sh "godot --headless --path . --import"
+                }
+            }
+        }
+
         stage('Export to ZIP') {
             steps {
                 script {
                     // Define the output ZIP file name using the build number
                     def zipFileName = "play2world3d_desktop_${env.GIT_BUILD_NUMBER}.zip"
 
-                    // Path for zip folder
-                    def zipFolderPath = '/home/godot/zip_folder'
-
                     // Ensure the zip_folder exists before exporting
-                    sh "mkdir -p ${zipFolderPath}"
+                    sh 'mkdir -p zip_folder'
 
                     // Run Godot export command to create a ZIP file
-                    sh "godot --headless --export-pack 'win' ${zipFolderPath}/${zipFileName}"
+                    sh "godot --headless --export-pack 'win' zip_folder/${zipFileName}"
 
                     // Upload the ZIP file to GCS
-                    sh "gsutil cp ${zipFolderPath}/${zipFileName} gs://$GCS_BUCKET/"
+                    sh "gsutil cp zip_folder/${zipFileName} gs://$GCS_BUCKET/"
                 }
             }
         }
