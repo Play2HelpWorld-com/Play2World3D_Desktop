@@ -1,44 +1,115 @@
-<br>
-<p align="center"><img src=title.png width="450px"></p>
-Free and open source sandbox game with peer-to-peer multiplayer, world editor, PvP and a physics-based building system. It is made with Godot 4 using GDScript.<br><br>
+# **Art World | Love, Laugh, Learn, Lucrative for Art🎨**
 
-Download the latest beta release:<br>
-[![Tinybox](https://img.shields.io/badge/Get%20latest-beta%20version-teal?style=plastic)](https://github.com/caelan-douglas/tinybox/releases/latest)<br>
-### License
+## **🧾Table of Contents**
 
-Tinybox is free software licensed under the GNU Affero General Public License v3 (GNU AGPLv3), located in [`COPYING.txt`](COPYING.txt).
+- [**Art World | Love, Laugh, Learn, Lucrative for Art🎨**](#art-world--love-laugh-learn-lucrative-for-art)
+  - [**🧾Table of Contents**](#table-of-contents)
+  - [**📖Introduction**](#introduction)
+  - [**🚀How to Access Art World**](#how-to-access-art-world)
+  - [**🎮Gameplay \& Features**](#gameplay--features)
+  - [**⚙️Technical Details**](#️technical-details)
+    - [**🚨System Requirements**](#system-requirements)
+      - [Minimum:](#minimum)
+      - [Recommended:](#recommended)
+    - [**🖥️Tech Stack**](#️tech-stack)
+    - [**🛠️Installation \& Setup**](#️installation--setup)
+      - [**Download from Itch.io**](#download-from-itchio)
+  - [**🗂️Repository Structure**](#️repository-structure)
+  - [**🤝Community Contributions**](#community-contributions)
+  - [**👨🏻‍💻Contact \& Support**](#contact--support)
 
-Some assets (textures, audio, music, etc.) are under different licensing. These licenses include, but are not necessarily limited to:
+## **📖Introduction**<a name="Introduction"></a>
 
-- GNU AGPLv3
-- Creative Commons CC0
-- Creative Commons CC-BY-SA 4.0
+Welcome to _Magic Worlds_ where everything is possible and the only limit is your imagination and dreams. Forever free, family friendly and open source.
 
-Files with different licenses are denoted in the various `licenses.txt` files located in the respective data folders, which point to the file's source and their license.
+_Art World_ is a creative realm within _Magic Worlds_ where players can unleash their artistic potential. Explore stunning virtual galleries, participate in live painting sessions, and collaborate with other artists to create digital masterpieces. Whether you're an aspiring painter, a sculptor, or an art enthusiast, _Art World_ offers endless opportunities for self-expression and artistic growth.
 
-The Godot Engine is under its own license, the details of which are noted at https://godotengine.org/license/.
+## **🚀How to Access Art World**<a name="How-to-access"></a>
 
-## About
+1. **Launch Magic Worlds** and enter your spaceship.
+2. **Talk to the Vice Captain** by walking up ahead and pressing `E`.
+3. **Head straight up to the bridge** and enter by pressing `E`.
+4. **Once in the bridge, climb up the platform** to access the travel console.
+5. **Access the console** by entering the passcode `[789]`.
+6. **Select Art World** in the World Hub.
+7. **Start Exploring**: Visit art studios, create digital paintings, and interact with virtual artists.
 
-### Screenshots
-<img src=.export_exclude/screenshot_1.png width="600px">
-<img src=.export_exclude/screenshot_3.png width="600px">
-<img src=.export_exclude/screenshot_2.png width="600px">
-<img src=.export_exclude/screenshot_4.png width="600px">
+## **🎮Gameplay & Features**<a name="features"></a>
 
-### Game vision
-Tinybox *('tiny + sandbox')* is a sandbox game focused on creativity, experimentation, and destroying your friends with rockets. Bricks allow players to create destructible platforms, bridges, houses, vehicles, etc. The world editor allows players to delve a bit deeper and create their own worlds with custom events and features. As of now, the main goal of feature updates in the project is to expand on this with more included worlds; new features, events, and objects in the editor; and new item types.
+- 🎨 **Virtual Galleries** – Showcase and explore artworks from players worldwide.
+- 🖌 **Live Painting Sessions** – Join real-time collaborative painting events.
+- 🏺 **Sculpture Workshops** – Learn and create stunning 3D sculptures.
+- 🖼 **Exhibitions & Competitions** – Participate in seasonal art exhibitions and contests.
+- 🎭 **Meet the Masters** – Interact with AI-powered historical artists and learn their techniques.
+- 🎁 **Exclusive Rewards** – Unlock unique art tools, frames, and collectibles.
 
-In order to keep PvP aligned with the physics-based sandbox nature of the game, weapons generally interact with the world in some way (ex. bombs and rockets for ranged weapons, rather than hitscan weapons.)
+## **⚙️Technical Details**<a name="techdetails"></a>
 
-## Setting up the project
-[![Godot](https://img.shields.io/badge/Project%20Godot%20version:-4.2.2-purple?logo=godotengine&logoColor=white&style=plastic)](https://godotengine.org/)<br>
-Like any other Godot project, working on a copy of Tinybox is mostly just a matter of opening it in the Godot editor. The project's current Godot version is linked above.<br>
-An additional step you will have to take is linking a Blender 3.0+ executeable in your Godot Editor settings. **I recommend you do this before loading the project to avoid import errors.**<br>
-`Editor > Editor Settings > FileSystem > Import > Blender 3 Path`<br>
-If done correctly, you should be able to see the .blend files in the /data/models directory within the Editor filesystem. On macOS, you will have to link the actual executeable within the Blender.app Contents, not Blender.app binary itself. For example, on my macOS install the path I have set is:
-`/Applications/Blender.app/Contents/MacOS`
+### **🚨System Requirements**
 
-If you're working on this (or any multiplayer project) and running Windows, I recommend using the app [`clumsy`](https://github.com/jagt/clumsy), which is very helpful for simulating bad network conditions (latency, dropped packets, throttled connection, etc.) when testing.
+#### Minimum:
 
-Tinybox enforces statically typed GDScript - see the static typing guide [`here.`](https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/static_typing.html)
+- **OS**: Windows 10 (64-bit) / Linux / macOS 10.15+
+- **Processor**: Intel Core i5-4460 / AMD FX-6300
+- **Memory**: 8 GB RAM
+- **Graphics**: NVIDIA GTX 760 / AMD Radeon R7 260X
+- **DirectX**: Version 11
+- **Storage**: 50 GB available space
+
+#### Recommended:
+
+- **OS**: Windows 11 / Latest macOS / Linux (Latest)
+- **Processor**: Intel Core i7-8700 / AMD Ryzen 5 3600
+- **Memory**: 16 GB RAM
+- **Graphics**: NVIDIA RTX 2060 / AMD RX 5700 XT
+- **DirectX**: Version 12
+- **Storage**: 50 GB SSD
+
+### **🖥️Tech Stack**
+
+_Magic Worlds_ is built using the following technologies:
+
+- **Game Engine**: Godot Game Engine
+- **Programming Languages**: GitHub, GDScript, Python, JavaScript
+- **Database**: MySQL, MongoDB
+- **Cloud Platforms**: AWS, Google Cloud
+- **Operating Systems**: Windows, Linux, macOS, iOS, mobile
+
+### **🛠️Installation & Setup**
+
+#### **Download from Itch.io**
+
+1. Visit [Magic Worlds on Itch.io](https://magicworlds.itch.io/magic-world).
+2. Download the latest version of _Magic Worlds_.
+3. Extract the downloaded file (if applicable).
+4. Run the game executable to start playing.
+
+## **🗂️Repository Structure**<a name="repo-structure"></a>
+
+```plaintext
+ArtWorld3D_Desktop/
+│-- assets/        # Game assets (music, visuals, animations)
+│-- src/           # Main game source code
+│-- docs/          # Documentation files
+│-- tests/         # Unit and integration tests
+│-- README.md      # This file
+│-- LICENSE        # License details
+```
+
+## **🤝Community Contributions**<a name="contributions"></a>
+
+_Art World_ is part of the open-source _Magic Worlds_ project. You can contribute by:
+
+- Forking the repository and submitting pull requests.
+- Reporting bugs and suggesting improvements.
+- Joining discussions and beta testing.
+
+## **👨🏻‍💻Contact & Support**<a name="contact-support"></a>
+
+📧 **Email**: mflynn1999@gmail.com  
+📘 **Facebook**: [Magic Worlds](https://www.facebook.com/MagikWorlds)  
+🐦 **Twitter**: [@magicworlds3](https://x.com/magicworlds3)  
+📺 **YouTube**: [Magic Worlds TV](https://youtube.com/@magicworldstv?si=FHtkbuWJh5aYKmQy)  
+👽 **Reddit**: [Play2World](https://www.reddit.com/user/Play2World/)  
+✈️ **Telegram**: [Play2World](https://t.me/Play2World)  
+🔗 **LinkedIn**: [Magic Worlds](https://www.linkedin.com/company/magic-worlds/)
